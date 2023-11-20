@@ -1,0 +1,45 @@
+---
+title: "Dr. Adam N. H. Smith"
+subtitle: "Director, Sea Through Science"
+about:
+  template: trestles
+  id: who-block
+  image: ../img/purple_headshot.jpg
+  links:
+    - icon: envelope
+      text: Email
+      href: "mailto:anhsmith@gmail.com"  
+    - icon: mortarboard-fill
+      text: Google Scholar
+      href: https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ
+    - icon: github
+      text: Github
+      href: https://github.com/anhsmith
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/adam-smith-1a723532/
+    - text: "{{< iconify fa6-brands square-x-twitter >}}"
+      href: https://twitter.com/anhsmith
+---
+
+::: {#who-block}
+
+## Overview
+
+I am a scientist, statistician, ecologist, modeller, and lecturer. I am based in Auckland, New Zealand, on the beautiful Hibiscus Coast.
+
+
+## Education
+
+- BSc in Zoology from the University of Canterbury
+- P.G.Dip.Sci in Ecology from the University of Canterbury
+- MSc in Statistics with First Class Honours from the University of Auckland
+- PhD in Statistics from Massey University
+
+## Professional experience
+
+I have over 20 years experience as a scientist, having worked at the [Department of Conservation (DOC)](https://www.doc.govt.nz/), the [National Institute for Water and Atmospheric Research (NIWA)](https://www.niwa.co.nz), and for over ten years as a Lecturer/Senior Lecturer in Statistics at [Massey University](https://www.massey.ac.nz) Auckland. I have been a Workshop Instructor/Research Associate for [PRIMER-e](https://www.primer-e.co.nz) since 2017. 
+
+:::
+
+

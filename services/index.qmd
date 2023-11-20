@@ -1,0 +1,17 @@
+---
+title: "Services"
+navbar:
+  pinned: true
+  logo: /img/logo.png
+---
+
+## Quantitative
+
+- Statistical analysis and reporting
+- Training and workshops
+
+## Marine ecology
+
+- Baited remote underwater video  ([BRUVs](../bruv/index.qmd)) surveys of fishes and habitats
+- Scientific scuba diving
+

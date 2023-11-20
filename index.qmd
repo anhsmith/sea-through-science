@@ -1,0 +1,29 @@
+---
+title: "SEA THROUGH SCIENCE LTD"
+about:
+  template: solana
+  id: about-block
+  image: img/eyewave_bg.jpg
+  links:
+    - icon: envelope
+      text: Email
+      href: "mailto:anhsmith@gmail.com"  
+    - icon: mortarboard-fill
+      text: Google Scholar
+      href: https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ
+    - icon: github
+      text: Github
+      href: https://github.com/anhsmith
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/adam-smith-1a723532/
+---
+
+::: {#about-block}
+
+Sea Through Science is a boutique scientific consulting company, specialising in statistical analysis, data science, and education. We do much of our work in the life sciences, particularly marine community ecology and fisheries, but we can work in any field or discipline.
+
+Please feel free to [drop us a line](mailto:anhsmith@gmail.com) if you would like to discuss potential projects or just want to get in touch.
+
+:::
+

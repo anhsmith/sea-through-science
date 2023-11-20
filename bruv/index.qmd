@@ -1,0 +1,33 @@
+---
+title-block-banner: ../img/tiger.png
+title-block-style: default
+title: "Baited Remote Underwater Video<br><br><br><br><br><br><br><br><br><br><br><br>"
+bibliography: ../references.bib
+csl: ../nature.csl
+---
+
+## The BRUV method
+
+Baited Remote Underwater Video, or BRUV, is considered the standard method for surveying fishes and habitats worldwide. BRUVs have several advantages over many other methods of sampling fish communities, in that is efficient, non-destructive, and less species- and size-selective. The video footage becomes a permanent record of the habitat and biological community. 
+
+![The BRUV unit comprises a metal frame, two video cameras in special housings, lights, and a long arm with a bait cannister.](../img/bruv2.png)
+
+The team at Sea Through Science have extensive experience with using underwater video methods across the world, including the Galapagos Islands [@smith_instantaneous_2020; @acuna-marrero_spatial_2018], New Caledonia, Fiji, Tonga, Rangitāhua/Kermadec Islands, the Poor Knights and Mokohinau Islands, all over the Hauraki Gulf [@smith_effects_2014; @smith_incorporating_2012], and Fiordland. Adam co-authored the guide to the BRUV method [@langlois_field_2020] and publications in *Nature* [@macneil_global_2020] and *Science* [@simpfendorfer_widespread_2023] as part of the [Global FinPrint](https://globalfinprint.org/) project.
+
+## Our BRUVs in the media
+
+#### Kermit the Kermadec Island great white
+
+{{< video https://players.brightcove.net/963482464001/0xpHIR6IB_default/index.html?videoId=5626618747001 >}}
+
+#### An [expedition](https://www.aucklandmuseum.com/discover/research/research-projects/south-west-pacific-expedition) to the Southwest Pacific
+
+{{< video https://www.youtube.com/watch?v=JshIXoc6lMU >}}
+
+#### A global study of shark populations
+
+[Newshub: Sharks 'functionally extinct' at many coral reefs around the world](https://www.newshub.co.nz/home/world/2020/07/sharks-functionally-extinct-at-many-coral-reefs-around-the-world-study.html)
+
+[The Conversation: Sharks are thriving at the Kermadec Islands, but not the rest of New Zealand, amid global decline](https://theconversation.com/sharks-are-thriving-at-the-kermadec-islands-but-not-the-rest-of-new-zealand-amid-global-decline-143439)
+
+

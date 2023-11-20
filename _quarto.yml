@@ -1,0 +1,54 @@
+project:
+  type: website
+  output-dir: docs
+
+execute:
+  freeze: auto
+  
+website:
+  title: "SEA THROUGH SCIENCE"
+  description: "Home website of Sea Through Science Ltd." 
+  page-footer:
+    left: "&copy; Copyright 2023, Adam N. H. Smith<br>"
+    right: "This site is being built with ❤️ and [Quarto](https://quarto.org/)."
+  image: img/purple_headshot.jpg
+  navbar:
+    pinned: true
+    logo: /img/eyewave.png
+
+ # your sub-pages
+    left:
+      - text: "About"
+        href: index.qmd
+      - text: "Services"
+        href: services/index.qmd
+      - text: "Who are we?"
+        href: who/index.qmd
+      - text: "BRUV"
+        href: bruv/index.qmd
+    right:
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ
+      - icon: github
+        href: https://github.com/anhsmith
+      - icon: linkedin
+        href: https://www.linkedin.com/in/adam-smith-1a723532/
+      - icon: envelope
+        href: "mailto:anhsmith@gmail.com"  
+
+
+# Don't touch unless you know what you are doing :) ------------
+
+format:
+  html:
+    fontsize: 1.1em
+    theme: 
+      light: [flatly, html/styles.scss]
+      dark: [darkly, html/styles.scss]
+    toc: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
+
