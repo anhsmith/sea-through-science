@@ -2,9 +2,6 @@ project:
   type: website
   output-dir: docs
 
-execute:
-  freeze: auto
-  
 website:
   title: "SEA THROUGH SCIENCE"
   description: "Home website of Sea Through Science Ltd." 
