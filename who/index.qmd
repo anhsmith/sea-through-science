@@ -4,7 +4,7 @@ subtitle: "Director, Sea Through Science"
 about:
   template: trestles
   id: who-block
-  image: ../img/purple_headshot.jpg
+  image: ../img/adam.jpg
   links:
     - icon: envelope
       text: Email
