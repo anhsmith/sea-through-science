@@ -8,10 +8,11 @@ website:
   page-footer:
     left: "&copy; Copyright 2023, Adam N. H. Smith<br>"
     right: "This site is being built with ❤️ and [Quarto](https://quarto.org/)."
-  image: img/purple_headshot.jpg
   navbar:
     pinned: true
-    logo: /img/mark_white_light.png
+    logo: /img/sarah_mark.jpg
+    background: "#071738"
+    foreground: "#ffffff"
 
  # your sub-pages
     left:
@@ -40,8 +41,8 @@ format:
   html:
     fontsize: 1.1em
     theme: 
-      light: [flatly, html/styles.scss]
-      dark: [darkly, html/styles.scss]
+      light: [flatly, theme.scss]
+      dark: [darkly, theme.scss]
     toc: false
     code-link: true
     anchor-sections: true
