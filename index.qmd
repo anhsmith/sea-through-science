@@ -1,9 +1,9 @@
 ---
-title: "SEA THROUGH SCIENCE LTD"
+title: ""
 about:
   template: solana
   id: about-block
-  image: img/eyewave_bg.jpg
+  image: img/sts_light.png
   links:
     - icon: envelope
       text: Email
