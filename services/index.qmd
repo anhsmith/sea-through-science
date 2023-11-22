@@ -5,10 +5,13 @@ navbar:
   logo: /img/logo.png
 ---
 
-## Quantitative
+## Quantitative science
 
-- Statistical analysis and reporting
+- General statistical advice, Q & A
 - Training and workshops
+- Statistical analysis and reporting
+- Editing and/or critiquing manuscripts and reports
+
 
 ## Marine ecology
 
