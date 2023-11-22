@@ -11,7 +11,7 @@ website:
   image: img/purple_headshot.jpg
   navbar:
     pinned: true
-    logo: /img/mark_white.png
+    logo: /img/mark_white_light.png
 
  # your sub-pages
     left:
