@@ -11,8 +11,6 @@ website:
   navbar:
     pinned: true
     logo: /img/sarah_mark.jpg
-    background: "#071738"
-    foreground: "#ffffff"
 
  # your sub-pages
     left:
@@ -41,8 +39,8 @@ format:
   html:
     fontsize: 1.1em
     theme: 
-      light: [flatly, theme.scss]
-      dark: [darkly, theme.scss]
+      light: [flatly, theme_flatly.scss]
+      dark: [darkly, theme_darkly.scss]
     toc: false
     code-link: true
     anchor-sections: true
