@@ -23,7 +23,7 @@ about:
 
 Sea Through Science is a boutique scientific consulting company, specialising in statistical analysis, data science, and education. We do much of our work in the life sciences, particularly marine community ecology and fisheries, but we can work in any field or discipline.
 
-Please feel free to [drop us a line](mailto:anhsmith@gmail.com) if you would like to discuss potential projects or just want to get in touch.
+Please [drop us a line](mailto:anhsmith@gmail.com) if you would like to discuss potential projects or just want to get in touch.
 
 :::
 
