@@ -15,6 +15,11 @@ navbar:
 
 ## Marine ecology
 
-- Baited remote underwater video  ([BRUVs](../bruv/index.qmd)) surveys of fishes and habitats
-- Scientific scuba diving
+- Fisheries stock assessment
+- Biological surveys of marine ecosystems and habitats
+- Field methodology includes:
+    + Baited remote underwater video ([BRUV](../bruv/index.qmd))
+    + Scuba diving
+    + Intertidal and subtidal sediment cores
+    + and more!
 
