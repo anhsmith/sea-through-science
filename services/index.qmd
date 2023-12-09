@@ -5,7 +5,7 @@ navbar:
   logo: /img/logo.png
 ---
 
-## Quantitative science
+## Statistical consulting
 
 - General statistical advice, Q & A
 - Training and workshops
@@ -13,9 +13,9 @@ navbar:
 - Editing and/or critiquing manuscripts and reports
 
 
-## Marine ecology
+## Marine ecological surveys
 
-- Fisheries stock assessment
+- Fisheries stock assessments
 - Biological surveys of marine ecosystems and habitats
 - Field methodology includes:
     + Baited remote underwater video ([BRUV](../bruv/index.qmd))
