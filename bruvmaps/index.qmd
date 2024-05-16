@@ -1,5 +1,5 @@
 ---
-title: "Maps of our BRUV surveys"
+title: "Some of our BRUV campaigns"
 format: 
   html:
     toc: true
