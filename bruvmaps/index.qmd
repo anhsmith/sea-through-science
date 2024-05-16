@@ -1,0 +1,31 @@
+---
+title: "Maps of our BRUV surveys"
+format: 
+  html:
+    toc: true
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+## Hauraki Gulf
+
+```{r}
+mapview_hau <- readRDS("mapview_hau.rds")
+mapview_hau
+```
+
+## Fiordland
+
+```{r}
+mapview_fld <- readRDS("mapview_fld.rds")
+mapview_fld
+```
+
+## Southwest Pacific 
+
+```{r}
+mapview_swp <- readRDS("mapview_swp.rds")
+mapview_swp
+```

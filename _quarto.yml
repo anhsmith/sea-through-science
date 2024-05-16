@@ -22,6 +22,8 @@ website:
         href: who/index.qmd
       - text: "BRUV"
         href: bruv/index.qmd
+      - text: "BRUVmaps"
+        href: bruvmaps/index.qmd
       - text: "Slides"
         href: slides/slides.qmd
     right:
