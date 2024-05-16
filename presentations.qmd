@@ -1,0 +1,18 @@
+---
+title: "Presentations"
+format:
+  html:
+    page-layout: full
+listing:
+  - id: slide-cards
+    contents: presentations
+    type: grid
+    fields: [image, title]
+    grid-columns: 4
+    sort:
+      - "title"
+---
+
+:::{#slide-cards}
+
+:::

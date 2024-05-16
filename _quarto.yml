@@ -22,6 +22,8 @@ website:
         href: who/index.qmd
       - text: "BRUV"
         href: bruv/index.qmd
+      - text: "Presentations"
+        href: presentations.qmd
     right:
       - icon: mortarboard-fill
         href: https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ
