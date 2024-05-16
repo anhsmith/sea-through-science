@@ -9,6 +9,8 @@ execute:
   warning: false
 ---
 
+::: panel-tabset
+
 ## Hauraki Gulf
 
 ```{r}
@@ -23,9 +25,11 @@ mapview_fld <- readRDS("mapview_fld.rds")
 mapview_fld
 ```
 
-## Southwest Pacific 
+## Southwest Pacific
 
 ```{r}
 mapview_swp <- readRDS("mapview_swp.rds")
 mapview_swp
 ```
+
+:::
