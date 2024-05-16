@@ -1,11 +1,11 @@
 ---
-title: "Presentations"
+title: ""
 format:
   html:
     page-layout: full
 listing:
   - id: slide-cards
-    contents: presentations
+    contents: slides
     type: grid
     fields: [image, title]
     grid-columns: 4
