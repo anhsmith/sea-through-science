@@ -180,11 +180,124 @@ map_fiordland24
 
 139 deployments at 15-86 m depths.
 
+## {background-video="vid/01_FLD24_S07_R04_deployandbluecod.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Hapuku
+- Tarakihi
+- School shark
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Crayfish
+- Much more!
+
+:::
+
+## {background-video="vid/02_FLD24_s07_R04_codcraysschoolies.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Hapuku
+- Tarakihi
+- School shark
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Crayfish
+- Much more!
+
+:::
+
+
+
+## {background-video="vid/03_FLD24_S06_R01_hapuku.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Hapuku
+- Tarakihi
+- School shark
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Crayfish
+- Much more!
+
+:::
+
+## {background-video="vid/04_FLD24_S03_R04_H12-04_R02_schoolie.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Hapuku
+- Tarakihi
+- School shark
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Crayfish
+- Much more!
+
+:::
+
+
+## {background-video="vid/05_FLD24_S06_R01_7gill.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Hapuku
+- Tarakihi
+- School shark
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Crayfish
+- Much more!
+
+:::
+
+
+## {background-video="vid/06_FLD24_S23_R04_blackcoral.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Hapuku
+- Tarakihi
+- School shark
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Crayfish
+- Much more!
+
+:::
+
+
 ## Current and future work 
 
 ::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="0%"}
 
 ::: {.incremental}
 
