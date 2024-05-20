@@ -303,7 +303,7 @@ map_fiordland24
 
 ::: {.columns}
 
-::: {.column width="0%"}
+::: {.column width="60%"}
 
 ::: {.incremental}
 
