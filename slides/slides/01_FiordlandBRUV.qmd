@@ -97,7 +97,7 @@ filters:
 ::: {.incremental .column width="60%"} 
 
 - Expensive upfront costs of gear
-- Time-consuming annotation of videos<br>(though AI will help!)
+- Time-consuming annotation of videos<br>(though machine learning will help!)
 - Unknown 'catchment' area of bait plume
 - Some deployments fail
 - Cannot tell the sex of non-sexually dimorphic species (e.g., blue cod)
@@ -187,14 +187,15 @@ map_fiordland24
 ### What did we see? 
 
 - Blue cod (MaxN > 25)
-- Hapuku
 - Tarakihi
 - School shark
+- Crayfish
+- Hāpuku
 - Broadnose sevengill
 - Sea perch
 - Kingfish
-- Crayfish
 - Much more!
+
 
 :::
 
@@ -205,14 +206,15 @@ map_fiordland24
 ### What did we see? 
 
 - Blue cod (MaxN > 25)
-- Hapuku
 - Tarakihi
 - School shark
+- Crayfish
+- Hāpuku
 - Broadnose sevengill
 - Sea perch
 - Kingfish
-- Crayfish
 - Much more!
+
 
 :::
 
@@ -225,31 +227,13 @@ map_fiordland24
 ### What did we see? 
 
 - Blue cod (MaxN > 25)
-- Hapuku
 - Tarakihi
 - School shark
+- Crayfish
+- Hāpuku
 - Broadnose sevengill
 - Sea perch
 - Kingfish
-- Crayfish
-- Much more!
-
-:::
-
-## {background-video="vid/04_FLD24_S03_R04_H12-04_R02_schoolie.mp4" background-video-muted="true"}
-
-::: {#all-white}
-
-### What did we see? 
-
-- Blue cod (MaxN > 25)
-- Hapuku
-- Tarakihi
-- School shark
-- Broadnose sevengill
-- Sea perch
-- Kingfish
-- Crayfish
 - Much more!
 
 :::
@@ -262,14 +246,35 @@ map_fiordland24
 ### What did we see? 
 
 - Blue cod (MaxN > 25)
-- Hapuku
 - Tarakihi
 - School shark
+- Crayfish
+- Hāpuku
 - Broadnose sevengill
 - Sea perch
 - Kingfish
-- Crayfish
 - Much more!
+
+
+:::
+
+
+## {background-video="vid/04_FLD24_S03_R04_H12-04_R02_schoolie.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Tarakihi
+- School shark
+- Crayfish
+- Hāpuku
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Much more!
+
 
 :::
 
@@ -281,14 +286,15 @@ map_fiordland24
 ### What did we see? 
 
 - Blue cod (MaxN > 25)
-- Hapuku
 - Tarakihi
 - School shark
+- Crayfish
+- Hāpuku
 - Broadnose sevengill
 - Sea perch
 - Kingfish
-- Crayfish
 - Much more!
+
 
 :::
 
@@ -336,7 +342,7 @@ Details of what information is required for fishery management and comparing the
 
 ## Current and future work {background-video="vid/AFID.mp4" background-video-loop="true"}
 
-- In talks with [afid.io](https://www.afid.io/) to develop AI for annotating NZ BRUV videos,<br>which would reduce the costs further!
+- In talks with [afid.io](https://www.afid.io/) to develop machine learning for annotating NZ BRUV videos,<br>which would reduce the costs further!
 
 
 ## Acknowledgements
