@@ -11,21 +11,21 @@ execute:
 
 ::: panel-tabset
 
-## Hauraki Gulf
+## Hauraki Gulf 2024
 
 ```{r}
 mapview_hau <- readRDS("mapview_hau.rds")
 mapview_hau
 ```
 
-## Fiordland
+## Fiordland 2024
 
 ```{r}
 mapview_fld <- readRDS("mapview_fld.rds")
 mapview_fld
 ```
 
-## Southwest Pacific
+## Southwest Pacific 2017
 
 ```{r}
 mapview_swp <- readRDS("mapview_swp.rds")
