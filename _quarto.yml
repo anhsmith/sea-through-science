@@ -27,6 +27,8 @@ website:
       - text: "Slides"
         href: slides/slides.qmd
     right:
+      - icon: youtube
+        href: https://www.youtube.com/@anhsmith
       - icon: mortarboard-fill
         href: https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ
       - icon: github
