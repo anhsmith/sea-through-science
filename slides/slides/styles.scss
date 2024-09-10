@@ -39,6 +39,18 @@ $presentation-title-slide-text-align: right;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Add a dark shadow */
 }
 
+
+#all-white-fifteen h2, 
+#all-white-fifteen h3, 
+#all-white-fifteen p, 
+#all-white-fifteen li, 
+#all-white-fifteen .fragment figcaption{
+  margin-left: 15%;
+  color: white !important; /* Change text color to white */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Add a dark shadow */
+}
+
+
 #all-white h2, 
 #all-white h3, 
 #all-white p, 

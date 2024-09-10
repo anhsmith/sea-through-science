@@ -1,0 +1,390 @@
+---
+title: "Monitoring of blue cod in Fiordland with<br>stereo Baited Remote Underwater Video (BRUV)"
+image: img/ReefCodScar.png
+author: "Dr. Adam N. H. Smith" 
+institute: "Director, Sea Through Science Ltd."
+title-slide-attributes:
+  data-background-video: "vid/fiord_cod_tarakihi.mp4"
+  data-background-size: "cover"
+  data-background-video-loop: true
+  data-background-video-muted: true
+  data-notes: "Hello. By way of introduction, I am Adam Smith. Some of you might know me from when I worked in the NIWA fisheries modelling group at Greta Point in 2006-8. I left NIWA to do my PhD and have been lecturing statistics at Massey University in Auckland since 2013. Alongside my Massey position, last year I started a business called Sea Through Science, for which I do statistical consulting and marine research. The latter is mostly done with baited remote underwater video, or BRUVs. Today, I'll be talking about what we've been up to with our BRUVs. I'll describe the BRUV method, and talking about why I and several other folks think it has some promise for monitoring fish stocks in Fiordland."
+format: 
+  revealjs:
+    theme: [default, styles.scss]
+    logo: "img/mark_black.png"
+    footer-logo-link: "https://anhsmith.github.io/sea-through-science/"
+    transition: fade
+    background-transition: fade
+    smaller: true
+filters: 
+  - reveal-header
+---
+
+## What is a 'Stereo BRUV'?
+
+::: {.columns}
+
+::: {.incremental .column width="40%"} 
+
+- Stereo Baited Remote Underwater Video
+- Stainless steel frame with two video cameras pointing at a bait canister, with lights and a depth sensor
+- Used around the world as a standard method of monitoring fishes
+
+:::
+
+::: {.column width="60%"}
+
+![](img/BRUV2.png)
+
+:::
+
+:::
+
+
+## What is a 'Stereo BRUV'?
+
+![](img/cal.png)
+
+::: {.absolute top=500}
+- After calibration with a specialist cube and software,<br>
+:::
+
+## What is a 'Stereo BRUV'?
+
+![](img/length2.png)
+
+::: {.absolute top=500}
+- After calibration with a specialist cube and software,<br>a stereo BRUV can accurately measure lengths and distances.
+:::
+
+## Advantages of BRUVs
+
+::: {.columns}
+
+::: {.incremental .column width="40%"} 
+
+- Cost-effective
+- Rapid replication
+- Non-destructive, non-lethal
+- Globally established methodology
+- Standardised observation period (60 min)
+- Broad depth range
+- Captures information on multiple species, size-classes, habitats
+- Permanent video archive
+
+:::
+
+::: {.column width="60%"}
+
+![Photo credit: C. Rob Priester](img/rob_housings.jpg)
+
+:::
+
+:::
+
+
+## Disadvantages of BRUVs {.h2right}
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+![Photo credit: C. Rob Priester](img/carry.jpg)
+
+:::
+
+::: {.incremental .column width="60%"} 
+
+- Expensive upfront costs of gear
+- Time-consuming annotation of videos<br>(though machine learning will help!)
+- Unknown 'catchment' area of bait plume
+- Some deployments fail
+- Cannot tell the sex of non-sexually dimorphic species (e.g., blue cod)
+
+:::
+
+:::
+
+::: notes
+
+Annotation is the process of watching the videos and recording data on abundance, length, habitat, etc. We don't call this 'analysis' so as not to confuse it with statistical analysis of the data.
+
+:::
+
+## Fiordland Marine Area {#all-white-right background-image="img/punga.jpg"}
+
+::: {.fragment}
+Unique marine ecosystems surrounded by UNESCO World Heritage site
+:::
+
+::: {.fragment}
+Important commercial and recreational fisheries include blue cod, rock lobster, and pāua
+:::
+
+::: {.fragment}
+Oversight by the Fiordland Marine Guardians is mandated under<br>The Fiordland (Te Moana o Atawhenua) Marine Management Act 2005
+:::
+
+::: {.fragment}
+
+[![Fiordland Marine Guardians (2023) *Proposed further amendments to fishing regulations in the Fiordland Marine Area* ](img/guardians.png)](https://www.mpi.govt.nz/dmsdocument/58060-Proposed-further-amendments-to-fishing-regulations-in-the-Fiordland-Te-Moana-o-Atawhenua-Marine-Area)
+:::
+
+
+## Blue cod {#all-dark background-image="img/bluecodpot.png"}
+
+Growing concern about the blue cod populations in Fiordland
+
+Blue cod in Fiordland were historically assessed by potting surveys
+
+No formal survey since 2014
+
+::: notes
+
+Fiordland's lobster fishery is a great success story, but there are growing concerns about the blue cod populations, due to increases in recreational fishing pressure.
+
+Historically, for fishery-independent surveys, blue cod are assessed surveyed by potting. These potting surveys are quite expensive and incur a high degree of additional mortality to the stock.
+
+The last potting survey of blue cod in Fiordland was a decade ago.
+
+:::
+
+## Our work {#all-white background-image="img/sw.jpg"}
+
+In 2021 and 2024, the Department of Conservation supported BRUV surveys of Fiordland.
+
+Ministry for Primary Industries has funded the annotation of the videos.
+
+
+## Fiordland 2021
+
+```{r}
+#| echo: false
+library(mapview)
+map_fiordland21 <- readRDS("map/map_fiordland21.rds")
+map_fiordland21
+```
+
+90 deployments at 10-95 m depths.
+
+
+## Tamatea/Dusky Sound 2024
+
+```{r}
+#| echo: false
+library(mapview)
+map_fiordland24 <- readRDS("map/map_fiordland24.rds")
+map_fiordland24
+```
+
+139 deployments at 15-86 m depths.
+
+## {background-video="vid/01_FLD24_S07_R04_deployandbluecod.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Tarakihi
+- School shark
+- Crayfish
+- Hāpuku
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Much more!
+
+
+:::
+
+## {background-video="vid/02_FLD24_s07_R04_codcraysschoolies.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Tarakihi
+- School shark
+- Crayfish
+- Hāpuku
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Much more!
+
+
+:::
+
+
+
+## {background-video="vid/03_FLD24_S06_R01_hapuku.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Tarakihi
+- School shark
+- Crayfish
+- Hāpuku
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Much more!
+
+:::
+
+
+## {background-video="vid/05_FLD24_S06_R01_7gill.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Tarakihi
+- School shark
+- Crayfish
+- Hāpuku
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Much more!
+
+
+:::
+
+
+## {background-video="vid/04_FLD24_S03_R04_H12-04_R02_schoolie.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Tarakihi
+- School shark
+- Crayfish
+- Hāpuku
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Much more!
+
+
+:::
+
+
+## {background-video="vid/06_FLD24_S23_R04_blackcoral.mp4" background-video-muted="true"}
+
+::: {#all-white}
+
+### What did we see? 
+
+- Blue cod (MaxN > 25)
+- Tarakihi
+- School shark
+- Crayfish
+- Hāpuku
+- Broadnose sevengill
+- Sea perch
+- Kingfish
+- Much more!
+
+
+:::
+
+
+## Current and future work 
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+::: {.incremental}
+
+- Annotation of 2024 Fiordland BRUV videos (ongoing, funded by MPI)
+    
+    - Focal species:<br>blue cod, tarakihi, hāpuku, school shark
+    - Two different indices of abundance:<br>"MaxN" and "MeanCount"
+    - Length frequencies<br>(for both MaxN and MeanCount)
+
+- Ongoing monitoring of Tamatea/Dusky Sound
+
+- Detailed exploration of the potential for BRUVs to provide fishery-relevant information
+
+- Surveying proposed MPAs in the Hauraki Gulf (funded by DOC)
+
+:::
+
+:::
+
+::: {.column width="40%"}
+
+![Photo credit: C. Rob Priester](img/work.jpg)
+
+:::
+
+:::
+
+::: notes
+
+More regular monitoring is possible due to the cost-effective, non-destructive nature of the method
+
+Details of what information is required for fishery management and comparing the ability of available methods to provide this information as part of an overall cost-benefit analysis.
+
+:::
+
+
+## Current and future work {background-video="vid/AFID.mp4" background-video-loop="true"}
+
+- In talks with [afid.io](https://www.afid.io/) to develop machine learning for annotating NZ BRUV videos,<br>which would reduce the costs further!
+
+
+## Acknowledgements
+
+::: {.columns}
+
+::: {.column width="60%"} 
+
+- Ministry for Primary Industries
+- Richard Kinsey (DOC Te Anau)
+- Fiordland Marine Guardians
+
+:::
+
+::: {.column width="30%"} 
+
+![Rich Kinsey<br>Photo credit: C. Rob Priester](img/rich.jpg)
+:::
+
+:::
+
+
+
+## Acknowledgements
+
+::: {.columns}
+
+::: {.column width="60%"} 
+
+- Ministry for Primary Industries
+- Richard Kinsey (DOC Te Anau)
+- Fiordland Marine Guardians
+- Odette "Deck Boss" Howarth
+- C. Robert Priester
+- Skippers and crew of the Southern Winds
+- Alex Burton
+
+:::
+
+::: {.column width="30%"} 
+
+![Odette Howarth<br>Photo credit: C. Rob Priester](img/odette.jpg)
+:::
+
+:::

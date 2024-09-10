@@ -28,144 +28,235 @@
     "text": "I have over 20 years experience as a scientist, having worked at the Department of Conservation (DOC), the National Institute for Water and Atmospheric Research (NIWA), and for over ten years as a Lecturer/Senior Lecturer in Statistics at Massey University Auckland. I have been a Workshop Instructor/Research Associate for PRIMER-e since 2017."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#what-is-a-stereo-bruv",
-    "href": "slides/slides/01_FiordlandBRUV.html#what-is-a-stereo-bruv",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#acknowledgements",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#acknowledgements",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\n\n\nSupporters and funders:\n\nFiordland Marine Guardians\nDepartment of Conservationespecially Rich Kinsey\nMinistry for Primary IndustriesJean Davis, Mark Geytenbeek, Rob Win\n\nSkippers and crew of the Southern WindsMiriam MacFadgen, Pete Kirkman, Richard Kinsey, Ross Funnell, Millie Mannering\nOther helpers in the fieldOdette Howarth, C. Robert Priester, Jenni Stanley\nAnnotatorsOdette Howarth, Alex Burton\n\n\n\n\n\nPhoto credit: C. Rob Priester\n\n\n\n\n\nI’d like to begin by acknowledging a few people.\nThank you to the Fiordland Marine Guardians for inviting me here to speak today\nTo other supporters of the work I’m going to present, at DOC and MPI\nAnd finally, thanks to the skippers and crew of the Southern Winds, and other helpers in the field and other aspects of this research"
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#protecting-fish-stocks",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#protecting-fish-stocks",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Protecting fish stocks",
+    "text": "Protecting fish stocks\n\n\n\nBroad agreement that it is the right thing to do\nRequires appropriate management\nNeed good information on:\n\nthe current status of populations\ntrends through time\n\nBut… counting fish ain’t easy!\nMany methods are available\n\n\n\n\nBroad agreement\n\nNow, this is a value statement, and I’m not here to convince anyone about what they should and shouldn’t value.\nAs a scientist, that’s not really my role.\nValues are subjective, and they vary from person to person.\nIt’s the role of groups like the Guardians to represent the values of the citizens and stakeholders.\nThat said, I suspect that almost everyone can agree that we shouldn’t overfish to the point of fishery collapse. We want these resources to be available to future generations.\n\nProtecting fish stocks requires good management. And good management is a balancing act between protecting the ecosystem without being overly restrictive. If rules are too restrictive, people lose trust in our institutions and they might just flout the rules. Not restrictive enough, and we degrade our resources.\nTo ensure management is justified and effective, we need good information on…\nthe current state of populations, some measure of the abundance of individuals, and perhaps information on the size and sex structure of the population.\nPerhaps more importantly, we need to know something about population trends through time. This is true especially when there are changes to regulations.\n\nTo look at trends, we need regular monitoring. The more often we survey, the more information we have on trends. There’s simply no substitute for regular surveying if you want to assess trends.\n\nMonitoring fish is hard – trust me, I’ve spent most of my career counting fish using various methods and analysing the data. As my colleague Russel Millar once said: Counting fish is hard because you can’t see them, and they move.\nThere are myriad methods out there for quantifying fish populations, and each method has it’s advantages and disadvantages that make it appropriate or inappropriate for any particular scenario.\n\nFor example,\n\nfor broad-scale surveys across a continental shelf, research trawls might be a good idea. This sort of data can feed into bit fishery fish stock assessment models, which are typically done at large spatial and temporal scales, and require truckloads of historical catch data.\nin more sensitive, shallow, coastal environments, counts by scuba divers works\nTag-recapture methods can be used for some populations. You catch a bunch of fish, tag them, come back another time and catch more fish, and we can get an idea of the population from the proportion of tagged fish in the second visit.\nAnd, of course, many many other methods"
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#which-methods-are-appropriate",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#which-methods-are-appropriate",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Which methods are appropriate?",
+    "text": "Which methods are appropriate?\n\nDepends entirely on the context:\n\n\nObjectives\nCosts and budget\nConstraints of the physical environment and organisms’ biology\nImpacts of the method on the populations and broader ecosystem\nQuality and quantity of information provided by the method\n\n\n\nWhich methods are appropriate depends entirely on context\nFirstly, the objectives are important. Everything stems from objectives. It’s no use just going out and counting stuff. We need to exactly what we want to measure, and why.\nThen there are the constraints posed by costs, and by the physical environment, and biology in general\nThe impacts of the method can be very important – do we want to use a destructive or non-destructive method\nAnd, of course, we need to consider the quantity and quality of the information provided, and whether that information meets our objectives.\nAgain, it all has to come back to the objectives, and this is one of the main reasons why I really wanted to make the trip down here and talk with you. I wanted to get a better idea of what we need to know, and whether the work that we have begun meets those needs. And, if so, how we can ensure that it continues."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#all-white-fifteen",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#all-white-fifteen",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "",
+    "text": "New fishing regulations for blue cod and other species in Fiordland\n\nHow will we know if the new regulations are effective?\nWhat is the current state of populations of blue cod and other key species?\nHow will these populations trend over the coming years?\nCan the regulations can be relaxed in future? When?\n\n\nAnswering any of these questions requires ongoing monitoring.\n\n\nWith that in mind, here’s the broader context of the work.\nAs you know, earlier this year, new regulations were brought in for recreational fishing of blue cod and some other species in Fiordland.\nChanges in regulations pose some important questions:\nAnswering any of these questions requires ongoing monitoring.\nSo, what is the current state of monitoring in Fiordland?"
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#blue-cod-potting",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#blue-cod-potting",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Blue cod potting",
+    "text": "Blue cod potting\n\n\n\n\n\n\n\n\n\n\n\nIn the 2014 survey, 1799 blue codwere captured (1237 kg; 96% killed)\nNon-neglible losses for a sensitive,low-productivity ecosystem\nNo potting survey since 2014\n\n\n\n?\n\n\nThe main method used to monitor blue cod fisheries is potting surveys.\n\nPotting surveys were done in Dusky Sound in 2002, 2008, and 2014. Here are the Catch Per Unit Effort numbers from these surveys, measured as kg of blue cod per pot. I’ve split them between inside the marine reserves vs outside the marine reserves.\n\nNo strong trend apparent there, but the last survey was a decade ago. Why?\n\nPotting is destructive method. It kills a lot of fish. For example, the 2014 survey captured over a tonne of blue cod, most of them killed.\n\nSuch losses may be ok for a large scale, productive fishery from which hundreds of tonnes are taken annually, but in a sensitive, enclosed environment like the fiords, many consider potting surveys to be inappropriate.\nIt is simply not fit for purpose.\n\nSo, there has been no potting survey since 2014, a full decade ago, which means we’re relying largely on anectodal evidence when making potentially contentious management decisions, which is not ideal.\n\nFurthermore, we don’t have hard data on what the current trends are for key species in Fiordland."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#blue-cod-potting-1",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#blue-cod-potting-1",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Blue cod potting",
+    "text": "Blue cod potting\n\n\n\n\nIn the 2014 survey, 1799 blue codwere captured (1237 kg; 96% killed)\nNon-neglible losses for a sensitive,low-productivity ecosystem\nNo potting survey since 2014\n\n\n\n\n\n\nIn the broader stock that includes Southland and Fiordland, there have been some worrying trends over the past 20 years. But this assessment is based on data from Foveaux Strait, not the inner fiords."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#blue-cod-potting-2",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#blue-cod-potting-2",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Blue cod potting",
+    "text": "Blue cod potting\n\n\n\n\n\n\nFrom Fiordland Marine Guardians (2023) Proposed further amendments to fishing regulations in the Fiordland Marine Area\n\n\n\n\nThe Fiordland Marine Guardians, in a document released last year, expressed an interest in investigating alternative, non-destructive methods of surveying key species in Fiordland. They specifically mention a method called Baited Underwater Video.\nWhich is where I come in."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#what-is-a-stereo-bruv",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#what-is-a-stereo-bruv",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "What is a ‘Stereo BRUV’?",
-    "text": "What is a ‘Stereo BRUV’?\n\n\n\nStereo Baited Remote Underwater Video\nStainless steel frame with two video cameras pointing at a bait canister, with lights and a depth sensor\nUsed around the world as a standard method of monitoring fishes"
+    "text": "What is a ‘Stereo BRUV’?\n\n\n\nStereo Baited Remote Underwater Video\nStainless steel frame with two video cameras pointing at a bait canister, with lights and a depth sensor\nUsed around the world as a standard method of monitoring fishes\n\n\n\n\n\n\nIntroducing the stereo baited remote underwater video\nEach unit comprises a stainless steel frame with two video cameras, lights, a depth and temperature sensor, and a canister of fresh bait sticking out the front.\nWe have six of these units, and we throw them into the sea and leave them for just over an hour. The bait attracts fish and other animals, and we can count the organisms and record the habitat.\nThis has become a standard tool for monitoring fishes internationally. I’ve used these things for several years across New Zealand from the Kermadecs to Fiordland, as well as in several other countries, the Galapagos Islands, New Caledonia, Fiji.\nWe also used this method in a global study of sharks called Global FinPrint, which surveyed sharks on coral reefs all over the world.\nWhy stereo? This one of the reasons why this method is so powerful…"
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#what-is-a-stereo-bruv-1",
-    "href": "slides/slides/01_FiordlandBRUV.html#what-is-a-stereo-bruv-1",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#what-is-a-stereo-bruv-1",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#what-is-a-stereo-bruv-1",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "What is a ‘Stereo BRUV’?",
-    "text": "What is a ‘Stereo BRUV’?\n\n\n\nAfter calibration with a specialist cube and software,"
+    "text": "What is a ‘Stereo BRUV’?\n\n\n\nAfter calibration with a specialist cube and software,\n\n\n\nAfter calibrating a stereo BRUV with a special hardware and software,\nyou can take accurate measurements of the lenghts of fish and other objects.\nMuch like our having two eyes allow to perceive depths."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#what-is-a-stereo-bruv-2",
-    "href": "slides/slides/01_FiordlandBRUV.html#what-is-a-stereo-bruv-2",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#what-is-a-stereo-bruv-2",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#what-is-a-stereo-bruv-2",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "What is a ‘Stereo BRUV’?",
-    "text": "What is a ‘Stereo BRUV’?\n\n\n\nAfter calibration with a specialist cube and software,a stereo BRUV can accurately measure lengths and distances."
+    "text": "What is a ‘Stereo BRUV’?\n\n\n\nAfter calibration with a specialist cube and software, stereo BRUVs allow for accurate measurements of lengths."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#advantages-of-bruvs",
-    "href": "slides/slides/01_FiordlandBRUV.html#advantages-of-bruvs",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
-    "section": "Advantages of BRUVs",
-    "text": "Advantages of BRUVs\n\n\n\nCost-effective\nRapid replication\nNon-destructive, non-lethal\nGlobally established methodology\nStandardised observation period (60 min)\nBroad depth range\nCaptures information on multiple species, size-classes, habitats\nPermanent video archive\n\n\n\n\n\nPhoto credit: C. Rob Priester"
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#the-bruv-process",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#the-bruv-process",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "The BRUV process",
+    "text": "The BRUV process\n\n\n\n\n\n \n\n\n\nThe full process of a BRUV survey involves first calibrating the cameras, which is usually done in a swimming pool.\nThen we go to the field and deploy the BRUVs.\nEach video must be annotated, which is the process of reviewing the footage and recording data on abundance, length, habitat, etc. This process takes time, sometimes several hours per video, depending on how fishy it is. We call this “annotation” rather than “analysis” so it is not confuses with the statistical analysis of the data.\nAnd finally, there is the data analysis and reporting."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#disadvantages-of-bruvs",
-    "href": "slides/slides/01_FiordlandBRUV.html#disadvantages-of-bruvs",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
-    "section": "Disadvantages of BRUVs",
-    "text": "Disadvantages of BRUVs\n\n\n\n\n\nPhoto credit: C. Rob Priester\n\n\n\n\nExpensive upfront costs of gear\nTime-consuming annotation of videos(though machine learning will help!)\nUnknown ‘catchment’ area of bait plume\nSome deployments fail\nCannot tell the sex of non-sexually dimorphic species (e.g., blue cod)\n\n\n\n\nAnnotation is the process of watching the videos and recording data on abundance, length, habitat, etc. We don’t call this ‘analysis’ so as not to confuse it with statistical analysis of the data."
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#all-white",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#all-white",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Our work in Fiordland",
+    "text": "Our work in Fiordland\nIn 2021 and 2024, the Department of Conservation funded BRUV surveys in Fiordland.\nThe Ministry for Primary Industries funded the annotation of the 2024 videos.\n\nIn 2021 and 2024, Rich Kinsey invited us on board the Southern Winds to undertake BRUV surveys in Fiordland.\nMPI has also supported the work by paying for annotation of the 2024 videos.\nToday, I’m going to present some of the videos and some preliminary results, mainly in the form of distribution maps."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#all-white-right",
-    "href": "slides/slides/01_FiordlandBRUV.html#all-white-right",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
-    "section": "Fiordland Marine Area",
-    "text": "Fiordland Marine Area\n\nUnique marine ecosystems surrounded by UNESCO World Heritage site\n\n\nImportant commercial and recreational fisheries include blue cod, rock lobster, and pāua\n\n\nOversight by the Fiordland Marine Guardians is mandated underThe Fiordland (Te Moana o Atawhenua) Marine Management Act 2005\n\n\n\n\n\nFiordland Marine Guardians (2023) Proposed further amendments to fishing regulations in the Fiordland Marine Area"
-  },
-  {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#all-dark",
-    "href": "slides/slides/01_FiordlandBRUV.html#all-dark",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
-    "section": "Blue cod",
-    "text": "Blue cod\nGrowing concern about the blue cod populations in Fiordland\nBlue cod in Fiordland were historically assessed by potting surveys\nNo formal survey since 2014\n\nFiordland’s lobster fishery is a great success story, but there are growing concerns about the blue cod populations, due to increases in recreational fishing pressure.\nHistorically, for fishery-independent surveys, blue cod are assessed surveyed by potting. These potting surveys are quite expensive and incur a high degree of additional mortality to the stock.\nThe last potting survey of blue cod in Fiordland was a decade ago."
-  },
-  {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#all-white",
-    "href": "slides/slides/01_FiordlandBRUV.html#all-white",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
-    "section": "Our work",
-    "text": "Our work\nIn 2021 and 2024, the Department of Conservation supported BRUV surveys of Fiordland.\nMinistry for Primary Industries has funded the annotation of the videos."
-  },
-  {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#fiordland-2021",
-    "href": "slides/slides/01_FiordlandBRUV.html#fiordland-2021",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#fiordland-2021",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#fiordland-2021",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "Fiordland 2021",
-    "text": "Fiordland 2021\n\n\n\n\n\n\n\n90 deployments at 10-95 m depths."
+    "text": "Fiordland 2021\n\n\n\n\n\n\n\n90 deployments at depths of 10-95 m\n\nHere’s a map of the sites we surveyed in 2021 – 90 deployments across multiple fiords. This was part of a project by my former postgraduate student, Odette Howarth."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#tamateadusky-sound-2024",
-    "href": "slides/slides/01_FiordlandBRUV.html#tamateadusky-sound-2024",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#tamateadusky-sound-2024",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#tamateadusky-sound-2024",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "Tamatea/Dusky Sound 2024",
-    "text": "Tamatea/Dusky Sound 2024\n\n\n\n\n\n\n\n139 deployments at 15-86 m depths."
+    "text": "Tamatea/Dusky Sound 2024\n\n\n\n\n\n\n\n136 deployments at depths of 15-86 m\n\nThen, in 2024, Rich Kinsey at DOC commissioned us to do a more intensive survey of Tamatea/Dusky Sound, for a total of 136 deployments."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#section",
-    "href": "slides/slides/01_FiordlandBRUV.html#section",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "",
-    "text": "What did we see?\n\nBlue cod (MaxN &gt; 25)\nTarakihi\nSchool shark\nCrayfish\nHāpuku\nBroadnose sevengill\nSea perch\nKingfish\nMuch more!"
+    "text": "What did we see?\n\nBlue cod\nTarakihi\n\n\n\nAlright, video time. Here’s a BRUV that’s just been dropped overboard and is heading to the seafloor, here around 26 metres.\nThis particular deployment is interesting for a few reasons. There is nothing much to see when it hits the floor, but after a few moments…\nThere are a lot of juvenile blue cod here. And the fact that so many turn up so quickly means that they are a lot very nearby the camera. This might indicate a habitat that is important to juvenile blue cod.\nThere’s also a couple of tarakihi here."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#section-1",
-    "href": "slides/slides/01_FiordlandBRUV.html#section-1",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#abundance-of-blue-cod",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#abundance-of-blue-cod",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Abundance of blue cod",
+    "text": "Abundance of blue cod\n\n\n\nHere’s a map of Dusky Sound showing counts of blue cod as the size of the points. Bigger points mean more blue cod were seen at that site.\nThe video we just saw is this one in the Tuamoana Marine Reserve (fourth from the top of line).\nWhat do these numbers mean? The numbers are what’s known as the “MaxN” count, which is the highest number seen on a single frame of the video.\nWe don’t just count every fish we see, because a single fish could circle the gear 100 times and get counted 100 times, and we can’t tell that situation from 100 individuals going by. Hence, the conservative approach of using a single frame.\nBy this method, we can get some very large counts, up to 38 individual blue cod here, with an average of 5.5 per deployment. We also did some surveys for DOC in the outer Hauraki Gulf this year, and got as many as 56 snapper in one frame.\nThe MaxN count from a single frame is the standard index of relative abundance that can be compared among sites and over time.\nWe also take measurements of lengths at different intervals, so that we can get a lot of information about the size-structure of the population."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-tarakihi",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-tarakihi",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Presence of tarakihi",
+    "text": "Presence of tarakihi\n\n\n\nFor other species that are not so numerous, such as tarakihi, I’m just going to show you maps of presence and absence.\nSolid points are sites where we saw tarakihi; open circles are where we didn’t.\nTarakihi turned up in a more than half of the sites, throughout the fiord."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-1",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-1",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "",
-    "text": "What did we see?\n\nBlue cod (MaxN &gt; 25)\nTarakihi\nSchool shark\nCrayfish\nHāpuku\nBroadnose sevengill\nSea perch\nKingfish\nMuch more!"
+    "text": "What did we see?\n\nBlue cod\nTarakihi\nSchool shark\nCrayfish\n\n\n\nWhat else did we see?\nThis is the same deployment as the last video I showed you, but much later on. We can see more species have turned up, notably crayfish and school shark. There are five crays and three schoolies here.\nWe can also see that there are not so many juvenile blue cod, but a lot more large blue cod. This is a key advantage of the method – it seems we get a much better view of the size structure of the population because we see whatever comes past, not just whatever gets stuck in the pot."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#section-2",
-    "href": "slides/slides/01_FiordlandBRUV.html#section-2",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-school-shark",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-school-shark",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Presence of school shark",
+    "text": "Presence of school shark\n\n\n\nI was very surprised at how many school shark we saw throughout the survey – they appeared in more than half the deployments, and throughout Dusky Sound. Up to around five individuals. My PhD student, Alex Burton, is working on school sharks, so he was very excited to see this.\nWe don’t see school sharks anywhere close to this regularly in the outer Hauraki Gulf."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-crayfish",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-crayfish",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Presence of crayfish",
+    "text": "Presence of crayfish\n\n\n\nCrayfish were also fairly widespread.\nIt looks like like they were observed particularly often in the marine reserve, where they were seen in 11 out of 14 sites. They were seen much less often outside the reserve.\nOf course, confirming this difference would require a formal statistical analysis, taking into account habitats, depth, etc., and it is certainly possible.\nBut I was surprised to see so many, actually. I don’t know if BRUVs have ever been so successful at surveying crayfish."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-2",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-2",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "",
-    "text": "What did we see?\n\nBlue cod (MaxN &gt; 25)\nTarakihi\nSchool shark\nCrayfish\nHāpuku\nBroadnose sevengill\nSea perch\nKingfish\nMuch more!"
+    "text": "What did we see?\n\nBlue cod\nTarakihi\nSchool shark\nCrayfish\nHāpuku\n\n\n\nEveryone’s favourite species with the goofy-looking underbite, the elusive hāpuku."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#section-3",
-    "href": "slides/slides/01_FiordlandBRUV.html#section-3",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-hāpuku",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-hāpuku",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Presence of hāpuku",
+    "text": "Presence of hāpuku\n \n\nWe saw hāpuku at 10 sites, only one or two individuals at each place.\nIt was very interesting that they were found so often right up in Supper Cove too."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-3",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-3",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "",
-    "text": "What did we see?\n\nBlue cod (MaxN &gt; 25)\nTarakihi\nSchool shark\nCrayfish\nHāpuku\nBroadnose sevengill\nSea perch\nKingfish\nMuch more!"
+    "text": "What did we see?\n\nBlue cod\nTarakihi\nSchool shark\nCrayfish\nHāpuku\nBroadnose sevengill\n\n\n\nAnother species that turned up often was the broadnose sevengill shark, which we saw in around 32, around a quarter of the deployments.\nLike this big female.\nSince presenting at the FishNZ meeting, I’m now in collaboration with Alice Rogers and her postgraduate students at Victoria University, working on a project on habitats and prey of sevengill sharks in Fiordland.\nI’m generally not clingy with my data. A lot of scientists are territorial, but I just want it to be used."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#section-4",
-    "href": "slides/slides/01_FiordlandBRUV.html#section-4",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-sevengill-shark",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-sevengill-shark",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Presence of sevengill shark",
+    "text": "Presence of sevengill shark\n\n\n\nAgain, this species was found throughout the fiord."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-4",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-4",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "",
-    "text": "What did we see?\n\nBlue cod (MaxN &gt; 25)\nTarakihi\nSchool shark\nCrayfish\nHāpuku\nBroadnose sevengill\nSea perch\nKingfish\nMuch more!"
+    "text": "What did we see?\n\nBlue cod\nTarakihi\nSchool shark\nCrayfish\nHāpuku\nBroadnose sevengill\nBlack coral and gorgonians\n\n\n\nLyndsay Holland of the Department of Conservation’s Conservation Services Programme contacted me after my presentation to FishNZ, because she was interested in where I saw black corals and gorgonians like these, so I sent her some screenshots and GPS coordinates."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#section-5",
-    "href": "slides/slides/01_FiordlandBRUV.html#section-5",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-black-coral",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#presence-of-black-coral",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Presence of black coral",
+    "text": "Presence of black coral\n\n\n\nHere’s where we saw black coral"
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-5",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#section-5",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
     "section": "",
-    "text": "What did we see?\n\nBlue cod (MaxN &gt; 25)\nTarakihi\nSchool shark\nCrayfish\nHāpuku\nBroadnose sevengill\nSea perch\nKingfish\nMuch more!"
+    "text": "What did we see?\n\nBlue cod\nTarakihi\nSchool shark\nCrayfish\nHāpuku\nBroadnose sevengill\nBlack coral, gorgonians\nMuch more!\n\n\n\nWe saw many, many other species. Across the survey we saw 37 species of fish alone."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#current-and-future-work",
-    "href": "slides/slides/01_FiordlandBRUV.html#current-and-future-work",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
-    "section": "Current and future work",
-    "text": "Current and future work\n\n\n\n\nAnnotation of 2024 Fiordland BRUV videos (ongoing, funded by MPI)\n\nFocal species:blue cod, tarakihi, hāpuku, school shark\nTwo different indices of abundance:“MaxN” and “MeanCount”\nLength frequencies(for both MaxN and MeanCount)\n\nOngoing monitoring of Tamatea/Dusky Sound\nDetailed exploration of the potential for BRUVs to provide fishery-relevant information\nSurveying proposed MPAs in the Hauraki Gulf (funded by DOC)\n\n\n\n\n\n\nPhoto credit: C. Rob Priester\n\n\n\n\n\nMore regular monitoring is possible due to the cost-effective, non-destructive nature of the method\nDetails of what information is required for fishery management and comparing the ability of available methods to provide this information as part of an overall cost-benefit analysis."
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#number-of-fish-species-observed",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#number-of-fish-species-observed",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Number of fish species observed",
+    "text": "Number of fish species observed\n\n\nHere’s a plot of how many fish species we saw in each deployment, a diversity metric known as species richness.\nWe saw up to 12 species of fish in a single site.\nSo, this really is is a wealth of information that can be mined for all sorts of interesting ecological questions.\nIn which depths, habitats and regions does each species occur?\nWhich depths, habitats and regions support the greatest diversity?\nWe can look at interactions and associations among species – which species are seen together, or not seen together?\n\nFor example, a predator might decline alongside prey species, giving a possible explanation for that decline.\nBetter able to understand ecosystem dynamics, which gives us a stronger basis for more effective, ecosystem-based management."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#current-and-future-work-1",
-    "href": "slides/slides/01_FiordlandBRUV.html#current-and-future-work-1",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
-    "section": "Current and future work",
-    "text": "Current and future work\n\nIn talks with afid.io to develop machine learning for annotating NZ BRUV videos,which would reduce the costs further!"
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#advantages-of-bruvs",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#advantages-of-bruvs",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Advantages of BRUVs",
+    "text": "Advantages of BRUVs\n\n\n\nCost-effective\nNon-destructive, non-lethal\nGlobally established methodology\nStandardised observation period (60 min)\nBroad depth range\nCaptures a wealth of information on multiple species, size-classes, and habitats\nPermanent video archive\n\n\n\n\n\nPhoto credit: C. Rob Priester\n\n\n\n\n\nSo, what are some of the advantages of this method?\nFor a start, it’s much cheaper than a potting survey\nImportantly, it’s non-destructive. No fish were harmed to bring you these data.\nBecause it’s cost effective and non-destructive, we can do it more frequently.\nIt’s globally established, standardised methodology. I was a co-author on a published paper that established the standardised methods.\nThey can access all sorts of habitats at a broad range of depths. We’ve sent some systems down to 1200 metres (not these ones).\nThey’ll record anything that goes near a BRUV, all species of all sizes, as well as habitat information.\nThe fact that we have all this geographical and habitat information means that we can figure out what which areas and habitats are important to blue cod populations, at different parts of their life history.\nFinally, all the videos are stored in a permanent archive. We’ve extracted the data that we want, but the future opportunities are endless. These videos will likely be mined for information and projects we haven’t even thought of yet."
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#acknowledgements",
-    "href": "slides/slides/01_FiordlandBRUV.html#acknowledgements",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\n\n\n\nMinistry for Primary Industries\nRichard Kinsey (DOC Te Anau)\nFiordland Marine Guardians\n\n\n\n\n\nRich KinseyPhoto credit: C. Rob Priester"
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#the-future-afid.io",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#the-future-afid.io",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "The future afid.io",
+    "text": "The future afid.io\n\nThe future is looking bright for these methods.\nI’m in talks with a research group in Australia called afid.io about training machine learning algorithms for automatically annotating BRUV videos taken from the NZ context, which would reduce the costs of this method even further!"
   },
   {
-    "objectID": "slides/slides/01_FiordlandBRUV.html#acknowledgements-1",
-    "href": "slides/slides/01_FiordlandBRUV.html#acknowledgements-1",
-    "title": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\n\n\n\nMinistry for Primary Industries\nRichard Kinsey (DOC Te Anau)\nFiordland Marine Guardians\nOdette “Deck Boss” Howarth\nC. Robert Priester\nSkippers and crew of the Southern Winds\nAlex Burton\n\n\n\n\n\nOdette HowarthPhoto credit: C. Rob Priester"
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#disadvantages-of-bruvs",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#disadvantages-of-bruvs",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Disadvantages of BRUVs",
+    "text": "Disadvantages of BRUVs\n\n\n\n\n\nSome upfront expenses (hardware and software)\nLack of historical baseline data in Fiordland\nCannot tell the sex of non-sexually dimorphic species (e.g., blue cod)\n\n\n\n\nLike any method, there are disadvantages too.\nThe gear is quite expensive to buy. All that specialist calibration hardware and software, there are the frames, cameras, torches, and software for annotating the videos – it’s all quite expensive. But the good news is that I have all the gear already.\nWe don’t have much in the way of historical baselines of stereo BRUV data for Fiordland. We have two surveys using our gear, and there have been a few surveys by other groups as well, though they used different types of systems.\nOne disadvantage of not capturing the fish, like you do with pots, is that you cannot tell the sex of a blue cod unless you open it up and look at the gonads.\nIndeed, potting surveys suggest that heavily exploited blue cod populations are generally skewed in favour of males. This can be important information for large-scale stock assessment models, but in smaller, more enclosed areas like the fiords, this may not be as important as having good, fine scale information on abundance and size structure.\nIf this information is indeed crucial, there may be other ways of obtaining it with supplementary methods. I’ve heard mentioned the idea of asking recreational fishers to record their catches, and even the sex of fish."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#recommendations",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#recommendations",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Recommendations",
+    "text": "Recommendations\n\n\n\n\n\n   \n\n\nOngoing monitoring of Tamatea/Dusky Sound using BRUVs (ideally every 1-3 years)\nAnnotation of the 2021 BRUV data (at least for sites repeated in 2024)\nStatistical analysis and reporting for key species\nComparison of potting data with BRUV data\nExploration of the potential for BRUVs and complementary methods to provide the information required by management\n\n\n\nSo where are we at now?\nSo far, DOC and MPI have funded the fieldwork and annotation of the 2024 data.\nWe do not have any funding for the statistical analysis and reporting, and we do not have funding lined up for future surveys.\nIt seems to me that continuing with these surveys, even if it’s just in Tamatea/Dusky Sound, is a good idea, given the sensitivity of the inner Fiordland ecosystems, concerns about population trends, and in light of recent changes to regulations.\nMuch like planting trees, the best time to start a good monitoring programme is 20 years ago, the second best time to start a good monitoring programme is right now.\nSo that’s what we’ve done.\nI don’t think it would be wise to wait another decade, or even five years, to do another survey.\nEstablishing trends through time requires regular monitoring. There’s really no way around this.\nIf we wait five years between surveys, then after 15 years we’ll get the bare minimum number of time points to look at trends: three. Analysis of trends requires us to quantify variability among years, which requires multiple time points.\nLuckily, with BRUVs, we can do regular surveys because it’s relatively cheap and non-destructive.\nEvery year would be ideal, but every 2-3 years would allow us to get a good idea of trends in a reasonable timeframe.\nAs I mentioned earlier, the data are already being picked up by other research groups and government agencies. I can think of so many projects I’d like to do with the data.\nIn particular, I’m planning to do a direct comparison of the BRUV data with the historical potting data. We can examine exactly what information is needed by management and how well each method meets those needs as part of a formal cost-benefit analysis. I have an intern student coming from France next year who is interested in this project.\nWe could even do paired surveys with pots and BRUVs at the same sites in future. This would mean we have overlap of data with the two methods, potentially enabling us to integrate the historical timeline of the potting surveys with current and future surveys with BRUVs.\nAnd like I said, there may be scope to complement the BRUV data with other sources, such as from recreational fishers and citizen science initiatives like Fish Mainland."
+  },
+  {
+    "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#discussion-points",
+    "href": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#discussion-points",
+    "title": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)",
+    "section": "Discussion points",
+    "text": "Discussion points\n \n\nEstablish monitoring objectives\nIs the stereo BRUV the right tool?\nIf so, how can we ensure the continuation of this work?\n\n\nWhich brings me to the end of my talk.\nIn this or some future meeting, I’d love to get a better idea of what the objectives of the monitoring should be.\nSo we can judge whether stereo BRUVs are the right tool for the job. Do they meet our objectives? Will they tell us what we need to know?\nI see a lot of potential here for stereo BRUVs. It is a globally established, cost-effective method that can provide good data not only on the abundance, size structure, and trends of key species, but it also a wealth of other information in Fiordland, one of the world’s most interesting and unique marine ecosystems.\nIf there is broad agreement that this work should continue, how can we ensure that it happens?\nWe’ve made a great start, but we have yet to secure funding to continue this work, or even report on what we’ve done so far.\n\nDOC is very supportive but it has a tonne of projects competing for limited funding and resources\nWhile MPI have been supportive, I get the sense that they prioritise work on stocks that are commercially harvested; and blue cod are no longer commercially harvested in the inner fiords\n\nSo although many people see the value of this project, there’s a risk that it’ll slip through the cracks of the major government agencies.\nIn my view, it would a shame to abandon this project after such a promising start, given the importance of monitoring to the management of these ecosystems for now and for future generations.\nThank you."
   },
   {
     "objectID": "index.html",
@@ -228,6 +319,6 @@
     "href": "slides/slides.html",
     "title": "",
     "section": "",
-    "text": "Monitoring of blue cod in Fiordland withstereo Baited Remote Underwater Video (BRUV)\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Non-Destructive Marine Monitoring in Fiordlandwith Baited Remote Underwater Video (BRUV)\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

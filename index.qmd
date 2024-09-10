@@ -7,7 +7,7 @@ about:
   links:
     - icon: envelope
       text: Email
-      href: "mailto:anhsmith@gmail.com"  
+      href: "mailto:adam@seathrough.science"  
     - icon: youtube
       text: YouTube
       href: https://www.youtube.com/@anhsmith
@@ -26,7 +26,7 @@ about:
 
 Sea Through Science is a boutique scientific consulting company, specialising in statistical analysis and modelling, data science, and education. Much of our work is in the life sciences but we work in any field or discipline. We also conduct field surveys of marine ecosystems using cutting-edge [underwater video technology](bruv/index.qmd). 
 
-Please [drop us a line](mailto:anhsmith@gmail.com) to discuss potential projects or for any other reason.
+Please [drop us a line](mailto:adam@seathrough.science) to discuss potential projects or for any other reason.
 
 :::
 
