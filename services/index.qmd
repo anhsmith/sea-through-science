@@ -13,13 +13,14 @@ navbar:
 - Editing and/or critiquing manuscripts and reports
 
 
-## Marine ecological surveys
+## Marine research
 
-- Fisheries stock assessments
 - Biological surveys of marine ecosystems and habitats
+- Fisheries and shark research
 - Field methodology includes:
     + Baited remote underwater video ([BRUV](../bruv/index.qmd))
     + Scuba diving
+    + Satellite and dart tagging
     + Intertidal and subtidal sediment cores
     + and more!
 
