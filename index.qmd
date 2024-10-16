@@ -3,7 +3,7 @@ title: ""
 about:
   template: solana
   id: about-block
-  image: img/sarah_square.jpg
+  image: img/plotnice.png
   links:
     - icon: envelope
       text: Email
