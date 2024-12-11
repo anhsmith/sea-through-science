@@ -7,10 +7,10 @@ navbar:
 
 ## Statistical consulting
 
-- General statistical advice, Q & A
-- Training and workshops
 - Statistical analysis and reporting
-- Editing and/or critiquing manuscripts and reports
+- General advice for scientists on topics such as experimental design and analysis
+- Training and workshops
+- Editing and/or critiquing manuscripts, reports, and proposals
 
 
 ## Marine research
