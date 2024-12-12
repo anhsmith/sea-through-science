@@ -3,13 +3,16 @@ title: ""
 about:
   template: solana
   id: about-block
-  image: img/plotnice.png
+  image: img/plotnice3.png
 
 ---
 
+
 ::: {#about-block}
 
+:::{style="text-align: center;"}
 ![](logo/bluebg_horiz.png)
+:::
 
 Need a statistician who understands biology and ecology?
 
@@ -17,8 +20,10 @@ Need a marine biologist who understands statistics?
 
 Sea Through Science is a boutique scientific consulting company, specialising in statistical analysis and modelling, data science, and education. We work primarily in the life sciences but we are not limited to any field or discipline. We also conduct original research in fisheries and marine ecology using cutting-edge technology such as telemetry and [baited underwater video](bruv/index.qmd).
 
+
+:::{style="text-align: center;"}
+[Get in touch!](mailto:'Adam Smith'<adam@seathrough.science>){.btn-lg .btn-outline-success .btn role="button"}
 :::
 
-
-[Get in touch!](mailto:'Adam Smith'<adam@seathrough.science>){.btn-lg .btn-outline-success .btn role="button"}
+:::
 

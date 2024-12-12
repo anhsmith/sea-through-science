@@ -35,11 +35,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -158,18 +158,22 @@ ul.task-list li input[type="checkbox"] {
   <div class="about-entity">
     <div class="entity-contents">
       <div class="about-contents"><div id="about-block">
+<div style="text-align: center;">
 <p><img src="logo/bluebg_horiz.png" class="img-fluid"></p>
+</div>
 <p>Need a statistician who understands biology and ecology?</p>
 <p>Need a marine biologist who understands statistics?</p>
 <p>Sea Through Science is a boutique scientific consulting company, specialising in statistical analysis and modelling, data science, and education. We work primarily in the life sciences but we are not limited to any field or discipline. We also conduct original research in fisheries and marine ecology using cutting-edge technology such as telemetry and <a href="./bruv/index.html">baited underwater video</a>.</p>
+<div style="text-align: center;">
+<p><a href="mailto:'Adam%20Smith'%3Cadam@seathrough.science%3E" class="btn-lg btn-outline-success btn" role="button">Get in touch!</a></p>
+</div>
 </div></div>
     </div>
-    <img src="img/plotnice.png" class="about-image
+    <img src="img/plotnice3.png" class="about-image
   rounded " style="width: 15em;">
   </div>
 </div>
 
-<p><a href="mailto:'Adam%20Smith'%3Cadam@seathrough.science%3E" class="btn-lg btn-outline-success btn" role="button">Get in touch!</a></p>
 
 
 
@@ -284,7 +288,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  let localAlternateSentinel = 'alternate';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 

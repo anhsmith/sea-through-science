@@ -50,8 +50,8 @@ format:
   html:
     fontsize: 1.1em
     theme: 
-      light: [flatly, theme_flatly.scss, styles.scss]
       dark: [darkly, theme_darkly.scss, styles.scss]
+      light: [flatly, theme_flatly.scss, styles.scss]
     toc: false
     code-link: true
     anchor-sections: true
