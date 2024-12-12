@@ -10,7 +10,7 @@ website:
     right: "This site is under construction with ❤️ and [Quarto](https://quarto.org/)."
   navbar:
     pinned: true
-    logo: /img/sarah_mark.jpg
+    logo: /logo/nobg_whwr_horiz.png
 
  # your sub-pages
     left:
@@ -45,8 +45,8 @@ format:
   html:
     fontsize: 1.1em
     theme: 
-      light: [flatly, theme_flatly.scss]
-      dark: [darkly, theme_darkly.scss]
+      light: [flatly, theme_flatly.scss, styles.css]
+      dark: [darkly, theme_darkly.scss, styles.css]
     toc: false
     code-link: true
     anchor-sections: true
@@ -54,3 +54,5 @@ format:
     reference-location: margin
     footnotes-hover: true
 
+execute:
+  freeze: auto
