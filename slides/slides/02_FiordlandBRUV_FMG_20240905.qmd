@@ -25,7 +25,7 @@ title-slide-attributes:
 format: 
   revealjs:
     theme: [default, styles.scss]
-    logo: "img/mark_black.png"
+    logo: "../../logo/nobg_blwr_horiz.png"
     footer-logo-link: "https://anhsmith.github.io/sea-through-science/"
     transition: fade
     background-transition: fade
