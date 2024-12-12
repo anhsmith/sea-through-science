@@ -10,7 +10,7 @@ website:
   page-footer:
     left: "&copy; Copyright 2023, Adam N. H. Smith<br>"
     right: "This site is under construction with ❤️ and [Quarto](https://quarto.org/)."
-  favicon: /favicon/favicon.ico
+  favicon: /favicon/favicon-96x96.png
   navbar:
     pinned: true
     logo: /logo/nobg_whwr_horiz.png
