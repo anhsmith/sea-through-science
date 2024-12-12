@@ -4,25 +4,12 @@ about:
   template: solana
   id: about-block
   image: img/plotnice.png
-  links:
-    - icon: envelope
-      text: Email
-      href: "mailto:adam@seathrough.science"  
-    - icon: youtube
-      text: YouTube
-      href: https://www.youtube.com/@anhsmith
-    - icon: mortarboard-fill
-      text: Google Scholar
-      href: https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ
-    - icon: github
-      text: Github
-      href: https://github.com/anhsmith
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/adam-smith-1a723532/
+
 ---
 
 ::: {#about-block}
+
+![](logo/bluebg_horiz.png)
 
 Need a statistician who understands biology and ecology?
 
@@ -30,7 +17,8 @@ Need a marine biologist who understands statistics?
 
 Sea Through Science is a boutique scientific consulting company, specialising in statistical analysis and modelling, data science, and education. We work primarily in the life sciences but we are not limited to any field or discipline. We also conduct original research in fisheries and marine ecology using cutting-edge technology such as telemetry and [baited underwater video](bruv/index.qmd).
 
-Please [drop us a line](mailto:adam@seathrough.science) to discuss potential projects or for any other reason.
-
 :::
+
+
+[Get in touch!](mailto:'Adam Smith'<adam@seathrough.science>){.btn-lg .btn-outline-success .btn role="button"}
 

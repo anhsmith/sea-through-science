@@ -8,7 +8,7 @@ website:
   title: ""
   description: "Home website of Sea Through Science Ltd." 
   page-footer:
-    left: "&copy; Copyright 2023, Adam N. H. Smith<br>"
+    left: "&copy; Copyright 2024, Adam N. H. Smith<br>"
     right: "This site is under construction with ❤️ and [Quarto](https://quarto.org/)."
   favicon: /favicon/favicon-96x96.png
   navbar:
@@ -29,6 +29,8 @@ website:
         href: bruvmaps/index.qmd
       - text: "Slides"
         href: slides/slides.qmd
+      - text: "Contact"
+        href: contact/index.qmd
     right:
       - icon: youtube
         href: https://www.youtube.com/@anhsmith
@@ -48,8 +50,8 @@ format:
   html:
     fontsize: 1.1em
     theme: 
-      light: [flatly, theme_flatly.scss, styles.css]
-      dark: [darkly, theme_darkly.scss, styles.css]
+      light: [flatly, theme_flatly.scss, styles.scss]
+      dark: [darkly, theme_darkly.scss, styles.scss]
     toc: false
     code-link: true
     anchor-sections: true

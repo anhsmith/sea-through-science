@@ -1,8 +1,0 @@
-/*-- scss:defaults --*/
-
-// Import fonts
-@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
-
-.navbar-logo {
-  min-height: 50px;
-}

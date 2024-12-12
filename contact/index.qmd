@@ -1,0 +1,18 @@
+---
+about:
+  template: trestles
+  id: contact-block
+  image: ../img/adam15.jpg
+---
+
+::: {#contact-block}
+
+## Get in touch!<br>We'd love to hear from you.
+
+Email: [adam@seathrough.science](mailto:"Adam Smith"<adam@seathrough.science>)
+
+Phone: [+64-21-0383941](tel:+64-21-0383941)
+
+:::
+
+

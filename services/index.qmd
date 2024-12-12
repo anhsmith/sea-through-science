@@ -1,5 +1,8 @@
 ---
-title: "Services"
+about:
+  template: solana
+  id: about-block
+  image: ../img/adam110.jpg
 navbar:
   pinned: true
   logo: /img/logo.png
@@ -24,3 +27,6 @@ navbar:
     + Intertidal and subtidal sediment cores
     + and more!
 
+:::{style="text-align: center;"}
+[Drop us a line](mailto:"Adam Smith"<adam@seathrough.science>){.btn-lg .btn-outline-success .btn role="button"} 
+:::
