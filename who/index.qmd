@@ -5,10 +5,8 @@ about:
   template: trestles
   id: who-block
   image: ../img/adam.jpg
+  image-shape: round
   links:
-    - icon: envelope
-      text: Email
-      href: "mailto:anhsmith@gmail.com"  
     - icon: mortarboard-fill
       text: Google Scholar
       href: https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ
@@ -18,8 +16,9 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/adam-smith-1a723532/
-    - text: "{{< iconify fa6-brands square-x-twitter >}}"
-      href: https://twitter.com/anhsmith
+    - icon: envelope
+      text: "Send Adam an email"
+      href: "mailto:anhsmith@gmail.com"  
 ---
 
 ::: {#who-block}

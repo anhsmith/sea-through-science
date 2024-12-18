@@ -3,6 +3,7 @@ about:
   template: solana
   id: about-block
   image: ../img/adam110.jpg
+  image-shape: rounded
 navbar:
   pinned: true
   logo: /img/logo.png
