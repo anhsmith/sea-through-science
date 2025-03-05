@@ -9,10 +9,10 @@ execute:
   warning: false
 ---
 
-[Otago 2025](mapview_ota.qmd)
+[Otago 2025](otago.qmd)
 
-[Hauraki Gulf 2024](mapview_hau.qmd)
+[Fiordland 2024-25](fiordland.qmd)
 
-[Fiordland 2024](mapview_fld.qmd)
+[Hauraki Gulf 2024](hauraki.qmd)
 
-[Southwest Pacific 2017](mapview_swp.qmd)
+[Southwest Pacific 2017](swpacific.qmd)

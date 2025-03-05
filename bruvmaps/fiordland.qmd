@@ -5,13 +5,13 @@ sidebar:
   - text: "BRUV Maps"
     menu:
       - text: "Otago 2025"
-        href: bruvmaps/mapview_ota.qmd
-      - text: "Hauraki Gulf 2024"
-        href: bruvmaps/mapview_hau.qmd
+        href: otago.qmd
       - text: "Fiordland 2024-25"
-        href: bruvmaps/mapview_fld.qmd
+        href: fiordland.qmd
+      - text: "Hauraki Gulf 2024"
+        href: hauraki.qmd
       - text: "Southwest Pacific 2017"
-        href: bruvmaps/mapview_swp.qmd
+        href: swpacific.qmd
 ---
 
 ```{r}

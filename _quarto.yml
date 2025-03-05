@@ -28,13 +28,13 @@ website:
       - text: "BRUVmaps"
         menu:
           - text: "Otago 2025"
-            href: bruvmaps/mapview_ota.qmd
-          - text: "Hauraki Gulf 2024"
-            href: bruvmaps/mapview_hau.qmd
+            href: bruvmaps/otago.qmd
           - text: "Fiordland 2024-25"
-            href: bruvmaps/mapview_fld.qmd
+            href: bruvmaps/fiordland.qmd
+          - text: "Hauraki Gulf 2024"
+            href: bruvmaps/hauraki.qmd
           - text: "Southwest Pacific 2017"
-            href: bruvmaps/mapview_swp.qmd
+            href: bruvmaps/swpacific.qmd
       - text: "Slides"
         href: slides/slides.qmd
       - text: "Contact"
