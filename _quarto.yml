@@ -15,7 +15,7 @@ website:
     pinned: true
     logo: /logo/nobg_whwr_horiz.png
 
- # your sub-pages
+    # your sub-pages
     left:
       - text: "About"
         href: index.qmd
@@ -26,7 +26,15 @@ website:
       - text: "BRUV"
         href: bruv/index.qmd
       - text: "BRUVmaps"
-        href: bruvmaps/index.qmd
+        menu:
+          - text: "Otago 2025"
+            href: bruvmaps/mapview_ota.qmd
+          - text: "Hauraki Gulf 2024"
+            href: bruvmaps/mapview_hau.qmd
+          - text: "Fiordland 2024-25"
+            href: bruvmaps/mapview_fld.qmd
+          - text: "Southwest Pacific 2017"
+            href: bruvmaps/mapview_swp.qmd
       - text: "Slides"
         href: slides/slides.qmd
       - text: "Contact"
@@ -41,8 +49,7 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/adam-smith-1a723532/
       - icon: envelope
-        href: "mailto:adam@seathrough.science"  
-
+        href: "mailto:adam@seathrough.science"
 
 # Don't touch unless you know what you are doing :) ------------
 
@@ -58,6 +65,7 @@ format:
     fig-cap-location: margin
     reference-location: margin
     footnotes-hover: true
+    sidebar: true
 
 execute:
   freeze: auto

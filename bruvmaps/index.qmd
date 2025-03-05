@@ -9,27 +9,10 @@ execute:
   warning: false
 ---
 
-::: panel-tabset
+[Otago 2025](mapview_ota.qmd)
 
-## Hauraki Gulf 2024
+[Hauraki Gulf 2024](mapview_hau.qmd)
 
-```{r}
-mapview_hau <- readRDS("mapview_hau.rds")
-mapview_hau
-```
+[Fiordland 2024](mapview_fld.qmd)
 
-## Fiordland 2024
-
-```{r}
-mapview_fld <- readRDS("mapview_fld.rds")
-mapview_fld
-```
-
-## Southwest Pacific 2017
-
-```{r}
-mapview_swp <- readRDS("mapview_swp.rds")
-mapview_swp
-```
-
-:::
+[Southwest Pacific 2017](mapview_swp.qmd)

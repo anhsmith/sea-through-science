@@ -1,0 +1,22 @@
+---
+title: "Fiordland 2024-25"
+format: html
+sidebar:
+  - text: "BRUV Maps"
+    menu:
+      - text: "Otago 2025"
+        href: bruvmaps/mapview_ota.qmd
+      - text: "Hauraki Gulf 2024"
+        href: bruvmaps/mapview_hau.qmd
+      - text: "Fiordland 2024-25"
+        href: bruvmaps/mapview_fld.qmd
+      - text: "Southwest Pacific 2017"
+        href: bruvmaps/mapview_swp.qmd
+---
+
+```{r}
+#| echo: false
+#| message: false
+mapview_fld <- readRDS("map_objects/mapview_fld.rds")
+mapview_fld
+```
