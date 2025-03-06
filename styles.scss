@@ -6,3 +6,7 @@
 .navbar-logo {
   min-height: 50px;
 }
+
+.navbar-brand h1, .navbar-title {
+    display: none !important;
+}

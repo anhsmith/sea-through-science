@@ -5,7 +5,7 @@ project:
     - CNAME
 
 website:
-  title: ""
+  title: "Sea Through Science"
   description: "Home website of Sea Through Science Ltd." 
   page-footer:
     left: "&copy; Copyright 2024, Adam N. H. Smith<br>"
