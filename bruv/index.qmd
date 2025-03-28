@@ -14,7 +14,17 @@ Stereo Baited Remote Underwater Video (BRUV or SBRUV) is a standard method used 
 
 The team at Sea Through Science has extensive experience with using underwater video methods across the world, including at the Galapagos Islands [@smith_instantaneous_2020; @acuna-marrero_spatial_2018], New Caledonia, Fiji, Tonga, Rangitāhua/Kermadec Islands, the Poor Knights and Mokohinau Islands, all over the Hauraki Gulf [@smith_effects_2014; @smith_incorporating_2012], and Fiordland. Adam co-authored the guide to the BRUV method [@langlois_field_2020] and publications in *Nature* [@macneil_global_2020] and *Science* [@simpfendorfer_widespread_2023] as part of the [Global FinPrint](https://globalfinprint.org/) project.
 
-## Our BRUVs in the media
+## Footage from our BRUVs
+
+We have plenty of videos on our [YouTube channel](https://www.youtube.com/@seathroughscience), but here are some notable mentions!
+
+#### Fiordland great white
+
+One of our BRUVs caught a curious white shark in Fiordland in February 2025, making news in NZ and abroad.
+
+{{< video https://players.brightcove.net/3921507366001/Syx4Zr1Keb_default/index.html?videoId=6369942056112 >}}
+
+Full [article](https://www.rnz.co.nz/news/national/544707/watch-rare-fiordland-great-white-footage-a-shock-to-researchers) on RNZ.
 
 #### Kermit the Kermadec Island great white
 
