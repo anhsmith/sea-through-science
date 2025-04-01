@@ -8,7 +8,9 @@ csl: ../nature.csl
 
 ## The BRUV method
 
-Stereo Baited Remote Underwater Video (BRUV or SBRUV) is a standard method used to survey fish and habitats worldwide. The BRUV method has several advantages over other methods of sampling fish communities, in that it is efficient, standardised, non-destructive, and generally less species- and size-selective. The video footage becomes a permanent record of the habitat and biological community. 
+Stereo Baited Remote Underwater Video (BRUV or SBRUV) is a method of surveying fish and habitats. A BRUV unit has a container of bait that attracts fish, which are observed by video cameras pointed at the bait. We have several BRUV units, which we deploy from a boat to the sea floor, attached to a rope and buoy. They are each deployed for about an hour several times per day. After the fieldwork is done, we systematically review the footage and extract biological data, usually in the form of counts and lengths of each species of fish. With repeated surveys over time, we can document any changes in the fish communities.
+
+The BRUV method has several advantages over other methods of sampling fish, in that it is efficient, standardised, non-destructive, and generally less species- and size-selective. The video footage becomes a permanent record of the habitat and biological community.
 
 ![A BRUV unit comprises a metal frame, two video cameras in special housings, lights, and a long arm with a bait cannister.](../img/bruv2.png)
 
@@ -16,7 +18,7 @@ The team at Sea Through Science has extensive experience with using underwater v
 
 ## Footage from our BRUVs
 
-We have plenty of videos on our [YouTube channel](https://www.youtube.com/@seathroughscience), but here are some notable mentions!
+We have plenty of videos on our [YouTube channel](https://www.youtube.com/@seathroughscience), but some notable mentions are below.
 
 #### Fiordland great white
 
