@@ -1,0 +1,24 @@
+---
+title: "Bay of Islands 2025"
+format: html
+sidebar:
+  - text: "BRUV Maps"
+    menu:
+      - text: "Otago 2025"
+        href: otago.qmd
+      - text: "Bay of Islands 2025"
+        href: bayofislands.qmd
+      - text: "Fiordland 2024-25"
+        href: fiordland.qmd
+      - text: "Hauraki Gulf 2024"
+        href: hauraki.qmd
+      - text: "Southwest Pacific 2017"
+        href: swpacific.qmd
+---
+
+```{r}
+#| echo: false
+#| message: false
+mapview_boi <- readRDS("map_objects/mapview_boi.rds")
+mapview_boi
+```

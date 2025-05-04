@@ -9,6 +9,8 @@ execute:
   warning: false
 ---
 
+[Bay of Islands 2025](bayofislands.qmd)
+
 [Otago 2025](otago.qmd)
 
 [Fiordland 2024-25](fiordland.qmd)
