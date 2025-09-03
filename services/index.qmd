@@ -39,7 +39,6 @@ Our goal is to make complex science understandable, defensible, and useful for d
 
 ---
 
-
 :::{style="text-align: center;"}
-[Let’s talk about your project](mailto:"Adam Smith"<adam@seathrough.science>){.btn-lg .btn-success role="button"}
+[Let’s talk about your project](mailto:'Adam Smith'<adam@seathrough.science>){.btn-lg .btn-outline-success .btn role="button"}
 :::

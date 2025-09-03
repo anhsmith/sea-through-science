@@ -21,21 +21,23 @@ about:
       href: "mailto:anhsmith@gmail.com"  
 ---
 
-::: {#who-block}
+
 
 ## Who we are
 
-Sea Through Science is led by **Dr Adam Smith**, a statistician and ecologist with over 20 years of experience in data analysis, advanced statistical modelling, and marine research.  
+Sea Through Science is led by **Dr Adam Smith**, a statistician and ecologist with over 20 years of experience researching, educating, and supervising quantitative science.  
 
 Based on Auckland’s Hibiscus Coast, I founded Sea Through Science to partner with researchers, organisations, and communities — helping to **bring your data to life** and turn complexity into clear, actionable insights.
 
+::: {#who-block}
+
 ## About Adam
 
-I bring a rare mix of skills as both a **professional statistician** and an **ecologist**. My career has included fieldwork in New Zealand and overseas, lecturing and supervising research at university level, and collaborating with government agencies, scientists, and community partners. I have authored over [60 peer-reviewed publications](https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ), reflecting a deep track record of rigorous, reproducible science.
+I bring a rare mix of skills as both a **professional statistician** and an **ecologist**. My career has included fieldwork in New Zealand and across the Pacific Ocean. I have lectured and supervised research at university level, and authored over [60 peer-reviewed publications](https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ), reflecting a broad track record of rigorous, reproducible science.
 
-I also work as a statistical consultant for [PRIMER-e](https://www.primer-e.com/), with whom I have taught more than 20 intensive, week-long courses in multivariate statistics around the world — including with [NOAA](https://www.noaa.gov/) in Hawai‘i, the [University of Guam](https://www.uog.edu/), and institutions across South Africa, Australia, and New Zealand. These experiences have shaped my ability to explain complex methods clearly and help diverse audiences apply them with confidence.
+I work closely with [PRIMER-e](https://www.primer-e.com/) as a statistical consultant and course instructor. I have taught more than 20 intensive, week-long courses in multivariate statistics around the world — at [NOAA](https://www.noaa.gov/) in Hawai‘i, the [University of Guam](https://www.uog.edu/), and various institutions across South Africa, Australia, and New Zealand. Through these experiences I have been exposed to a broad range of scientific disciplines, and shaped an ability to explain complex methods clearly and help researchers to apply them with confidence.
 
-What drives me is making science **transparent, rigorous, and useful**. Whether through clear, customised analysis and presentation, conducting fisheries surveys, training scientists in advanced methods, or mentoring students on research design, my goal is to give clients clarity and confidence in their results.
+What drives me is making science **transparent, rigorous, and useful**. Whether through clear, customised analysis and presentation, conducting field surveys, training scientists in advanced methods, or mentoring students on research design, my goal is to give clients clarity and confidence in their results.
 
 ## Education
 
@@ -46,10 +48,11 @@ What drives me is making science **transparent, rigorous, and useful**. Whether 
 
 ## Professional experience
 
-- Senior Lecturer in Statistics, Massey University (over a decade)  
+- Course Instructor & Statistical Consultant, [PRIMER-e](https://www.primer-e.com) (since 2017)  
+- Senior Lecturer in Statistics, [Massey University](https://www.massey.ac.nz/) (over a decade)  
 - Statistician, [Department of Conservation (DOC)](https://www.doc.govt.nz/) (3 years)  
 - Fisheries Scientist, [National Institute for Water and Atmospheric Research (NIWA)](https://www.niwa.co.nz) (3 years)  
-- Course Instructor & Statistical Consultant, [PRIMER-e](https://www.primer-e.com) (since 2017)  
+
 
 :::
 

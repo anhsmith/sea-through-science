@@ -13,7 +13,7 @@ about:
 ![](logo/bluebg_horiz.png){width=60%}
 
 
-## Clear science. Transparent results. 
+### Clear science. Transparent results. 
 
 Need a statistician who understands biology and ecology?  
 Need an ecologist who understands statistics?  
@@ -24,7 +24,7 @@ We combine expertise in ecology, fisheries, and data science with a commitment t
 
 ---
 
-## What we do
+### What we do
 
 We help researchers, organisations, and communities turn data into clear, actionable knowledge:  
 
@@ -39,7 +39,7 @@ We help researchers, organisations, and communities turn data into clear, action
 
 ---
 
-## Why choose us?
+### Why choose us?
 
 - **Clarity & transparency** – results you can trust, communicated without jargon  
 - **Cross-disciplinary expertise** – deep knowledge of both ecology and statistics
@@ -48,7 +48,7 @@ We help researchers, organisations, and communities turn data into clear, action
 ---
 
 :::{style="text-align: center;"}
-[Get in touch!](mailto:'Adam Smith'<adam@seathrough.science>){.btn-lg .btn-success .btn role="button"}
+[Get in touch!](mailto:'Adam Smith'<adam@seathrough.science>){.btn-lg .btn-outline-success .btn role="button"}
 :::
 
 :::

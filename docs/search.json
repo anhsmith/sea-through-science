@@ -4,35 +4,35 @@
     "href": "who/index.html",
     "title": "Dr. Adam N. H. Smith",
     "section": "",
-    "text": "Google Scholar\n  \n  \n    \n     Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Send Adam an email\n  \n\n  \n  \n\n\nSea Through Science is led by Dr Adam Smith, a statistician and ecologist with over 20 years of experience in data analysis, advanced statistical modelling, and marine research.\nBased on Auckland’s Hibiscus Coast, I founded Sea Through Science to partner with researchers, organisations, and communities — helping to bring your data to life and turn complexity into clear, actionable insights.\n\n\n\nI bring a rare mix of skills as both a professional statistician and an ecologist. My career has included fieldwork in New Zealand and overseas, lecturing and supervising research at university level, and collaborating with government agencies, scientists, and community partners. I have authored over 60 peer-reviewed publications, reflecting a deep track record of rigorous, reproducible science.\nI also work as a statistical consultant for PRIMER-e, with whom I have taught more than 20 intensive, week-long courses in multivariate statistics around the world — including with NOAA in Hawai‘i, the University of Guam, and institutions across South Africa, Australia, and New Zealand. These experiences have shaped my ability to explain complex methods clearly and help diverse audiences apply them with confidence.\nWhat drives me is making science transparent, rigorous, and useful. Whether through clear, customised analysis and presentation, conducting fisheries surveys, training scientists in advanced methods, or mentoring students on research design, my goal is to give clients clarity and confidence in their results.\n\n\n\n\nPhD in Statistics, Massey University\n\nMSc in Statistics (First Class Honours), University of Auckland\n\nPGDipSci in Ecology, University of Canterbury\n\nBSc in Zoology, University of Canterbury\n\n\n\n\n\nSenior Lecturer in Statistics, Massey University (over a decade)\n\nStatistician, Department of Conservation (DOC) (3 years)\n\nFisheries Scientist, National Institute for Water and Atmospheric Research (NIWA) (3 years)\n\nCourse Instructor & Statistical Consultant, PRIMER-e (since 2017)"
+    "text": "Sea Through Science is led by Dr Adam Smith, a statistician and ecologist with over 20 years of experience researching, educating, and supervising quantitative science.\nBased on Auckland’s Hibiscus Coast, I founded Sea Through Science to partner with researchers, organisations, and communities — helping to bring your data to life and turn complexity into clear, actionable insights."
   },
   {
     "objectID": "who/index.html#who-we-are",
     "href": "who/index.html#who-we-are",
     "title": "Dr. Adam N. H. Smith",
     "section": "",
-    "text": "Sea Through Science is led by Dr Adam Smith, a statistician and ecologist with over 20 years of experience in data analysis, advanced statistical modelling, and marine research.\nBased on Auckland’s Hibiscus Coast, I founded Sea Through Science to partner with researchers, organisations, and communities — helping to bring your data to life and turn complexity into clear, actionable insights."
+    "text": "Sea Through Science is led by Dr Adam Smith, a statistician and ecologist with over 20 years of experience researching, educating, and supervising quantitative science.\nBased on Auckland’s Hibiscus Coast, I founded Sea Through Science to partner with researchers, organisations, and communities — helping to bring your data to life and turn complexity into clear, actionable insights."
   },
   {
     "objectID": "who/index.html#about-adam",
     "href": "who/index.html#about-adam",
     "title": "Dr. Adam N. H. Smith",
-    "section": "",
-    "text": "I bring a rare mix of skills as both a professional statistician and an ecologist. My career has included fieldwork in New Zealand and overseas, lecturing and supervising research at university level, and collaborating with government agencies, scientists, and community partners. I have authored over 60 peer-reviewed publications, reflecting a deep track record of rigorous, reproducible science.\nI also work as a statistical consultant for PRIMER-e, with whom I have taught more than 20 intensive, week-long courses in multivariate statistics around the world — including with NOAA in Hawai‘i, the University of Guam, and institutions across South Africa, Australia, and New Zealand. These experiences have shaped my ability to explain complex methods clearly and help diverse audiences apply them with confidence.\nWhat drives me is making science transparent, rigorous, and useful. Whether through clear, customised analysis and presentation, conducting fisheries surveys, training scientists in advanced methods, or mentoring students on research design, my goal is to give clients clarity and confidence in their results."
+    "section": "About Adam",
+    "text": "About Adam\nI bring a rare mix of skills as both a professional statistician and an ecologist. My career has included fieldwork in New Zealand and across the Pacific Ocean. I have lectured and supervised research at university level, and authored over 60 peer-reviewed publications, reflecting a broad track record of rigorous, reproducible science.\nI work closely with PRIMER-e as a statistical consultant and course instructor. I have taught more than 20 intensive, week-long courses in multivariate statistics around the world — at NOAA in Hawai‘i, the University of Guam, and various institutions across South Africa, Australia, and New Zealand. Through these experiences I have been exposed to a broad range of scientific disciplines, and shaped an ability to explain complex methods clearly and help researchers to apply them with confidence.\nWhat drives me is making science transparent, rigorous, and useful. Whether through clear, customised analysis and presentation, conducting field surveys, training scientists in advanced methods, or mentoring students on research design, my goal is to give clients clarity and confidence in their results."
   },
   {
     "objectID": "who/index.html#education",
     "href": "who/index.html#education",
     "title": "Dr. Adam N. H. Smith",
-    "section": "",
-    "text": "PhD in Statistics, Massey University\n\nMSc in Statistics (First Class Honours), University of Auckland\n\nPGDipSci in Ecology, University of Canterbury\n\nBSc in Zoology, University of Canterbury"
+    "section": "Education",
+    "text": "Education\n\nPhD in Statistics, Massey University\n\nMSc in Statistics (First Class Honours), University of Auckland\n\nPGDipSci in Ecology, University of Canterbury\n\nBSc in Zoology, University of Canterbury"
   },
   {
     "objectID": "who/index.html#professional-experience",
     "href": "who/index.html#professional-experience",
     "title": "Dr. Adam N. H. Smith",
-    "section": "",
-    "text": "Senior Lecturer in Statistics, Massey University (over a decade)\n\nStatistician, Department of Conservation (DOC) (3 years)\n\nFisheries Scientist, National Institute for Water and Atmospheric Research (NIWA) (3 years)\n\nCourse Instructor & Statistical Consultant, PRIMER-e (since 2017)"
+    "section": "Professional experience",
+    "text": "Professional experience\n\nCourse Instructor & Statistical Consultant, PRIMER-e (since 2017)\n\nSenior Lecturer in Statistics, Massey University (over a decade)\n\nStatistician, Department of Conservation (DOC) (3 years)\n\nFisheries Scientist, National Institute for Water and Atmospheric Research (NIWA) (3 years)"
   },
   {
     "objectID": "slides/slides/02_FiordlandBRUV_FMG_20240905.html#acknowledgements",
@@ -270,28 +270,7 @@
     "href": "index.html",
     "title": "Sea Through Science",
     "section": "",
-    "text": "Need a statistician who understands biology and ecology?\nNeed an ecologist who understands statistics?\nSea Through Science is a boutique consulting company specialising in statistical analysis, modelling, and marine research.\nWe combine expertise in ecology, fisheries, and data science with a commitment to clarity — helping you see through complexity to insights that matter.\n\n\n\n\nWe help researchers, organisations, and communities turn data into clear, actionable knowledge:\n\nStatistical consulting – from study design to advanced modelling\n\nData analysis & reporting – rigorous, reproducible, and tailored to your needs\n\nTraining & workshops – practical courses in statistics and data analysis\n\nMarine research – innovative field studies using underwater video, tagging, diving, and more\n\n\nExplore all services\n\n\n\n\n\n\nClarity & transparency – results you can trust, communicated without jargon\n\nCross-disciplinary expertise – deep knowledge of both ecology and statistics\nProven experience – from international training courses to original marine research\n\n\n\nGet in touch!"
-  },
-  {
-    "objectID": "index.html#clear-science.-transparent-results.",
-    "href": "index.html#clear-science.-transparent-results.",
-    "title": "Sea Through Science",
-    "section": "",
-    "text": "Need a statistician who understands biology and ecology?\nNeed an ecologist who understands statistics?\nSea Through Science is a boutique consulting company specialising in statistical analysis, modelling, and marine research.\nWe combine expertise in ecology, fisheries, and data science with a commitment to clarity — helping you see through complexity to insights that matter."
-  },
-  {
-    "objectID": "index.html#what-we-do",
-    "href": "index.html#what-we-do",
-    "title": "Sea Through Science",
-    "section": "",
-    "text": "We help researchers, organisations, and communities turn data into clear, actionable knowledge:\n\nStatistical consulting – from study design to advanced modelling\n\nData analysis & reporting – rigorous, reproducible, and tailored to your needs\n\nTraining & workshops – practical courses in statistics and data analysis\n\nMarine research – innovative field studies using underwater video, tagging, diving, and more\n\n\nExplore all services"
-  },
-  {
-    "objectID": "index.html#why-choose-us",
-    "href": "index.html#why-choose-us",
-    "title": "Sea Through Science",
-    "section": "",
-    "text": "Clarity & transparency – results you can trust, communicated without jargon\n\nCross-disciplinary expertise – deep knowledge of both ecology and statistics\nProven experience – from international training courses to original marine research\n\n\n\nGet in touch!"
+    "text": "Clear science. Transparent results.\nNeed a statistician who understands biology and ecology?\nNeed an ecologist who understands statistics?\nSea Through Science is a boutique consulting company specialising in statistical analysis, modelling, and marine research.\nWe combine expertise in ecology, fisheries, and data science with a commitment to clarity — helping you see through complexity to insights that matter.\n\n\n\nWhat we do\nWe help researchers, organisations, and communities turn data into clear, actionable knowledge:\n\nStatistical consulting – from study design to advanced modelling\n\nData analysis & reporting – rigorous, reproducible, and tailored to your needs\n\nTraining & workshops – practical courses in statistics and data analysis\n\nMarine research – innovative field studies using underwater video, tagging, diving, and more\n\n\nExplore all services\n\n\n\n\nWhy choose us?\n\nClarity & transparency – results you can trust, communicated without jargon\n\nCross-disciplinary expertise – deep knowledge of both ecology and statistics\nProven experience – from international training courses to original marine research\n\n\n\nGet in touch!"
   },
   {
     "objectID": "bruvmaps/index.html",
