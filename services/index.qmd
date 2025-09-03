@@ -9,25 +9,37 @@ navbar:
   logo: /img/logo.png
 ---
 
-## Statistical consulting
+# Services
 
-- Statistical analysis and reporting
-- General advice for scientists on topics such as experimental design and analysis
-- Training and workshops
-- Editing and/or critiquing manuscripts, reports, and proposals
+At Sea Through Science, transparency is at the heart of what we do — from clear, reproducible analyses to straightforward communication of results.
 
+Our goal is to make complex science understandable, defensible, and useful for decision-making.  
 
-## Marine research
+---
 
-- Biological surveys of marine ecosystems and habitats
-- Fisheries and shark research
-- Field methodology includes:
-    + Baited remote underwater video ([BRUV](../bruv/index.qmd))
-    + Scuba diving
-    + Satellite and dart tagging
-    + Intertidal and subtidal sediment cores
-    + and more!
+## Statistical Consulting
+
+- **Transparent analysis and reporting** — rigorous statistical methods my real experts, fully documented and communicated in plain language.  
+- **Study design advice** — practical guidance on experimental design, survey planning, and data collection strategies.  
+- **Training and workshops** — tailored sessions to build capacity in statistics and modelling.  
+- **Editing and critique** — strengthen manuscripts, reports, and proposals with independent, constructive review.  
+
+---
+
+## Marine Research
+
+- **Biological surveys** — monitoring marine ecosystems, habitats, and biodiversity with transparent and defensible methods.  
+- **Fisheries and shark research** — providing evidence-based insights to support sustainable management.  
+- Field methods include:  
+  - **Stereo-BRUVs** for non-destructive fish community assessment  
+  - **Scuba-based surveys** for habitat and species monitoring  
+  - **Satellite and dart tagging** for movement and behaviour studies  
+  - **Intertidal and subtidal sediment cores** for benthic and environmental analysis  
+  - …and more  
+
+---
+
 
 :::{style="text-align: center;"}
-[Drop us a line](mailto:"Adam Smith"<adam@seathrough.science>){.btn-lg .btn-outline-success .btn role="button"} 
+[Let’s talk about your project](mailto:"Adam Smith"<adam@seathrough.science>){.btn-lg .btn-success role="button"}
 :::

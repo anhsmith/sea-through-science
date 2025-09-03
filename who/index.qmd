@@ -23,21 +23,33 @@ about:
 
 ::: {#who-block}
 
-## Overview
+## Who we are
 
-I am a scientist, statistician, ecologist, modeller, and lecturer. I am based in Auckland, New Zealand, on the beautiful Hibiscus Coast. I am the founder and director of Sea Through Science.
+Sea Through Science is led by **Dr Adam Smith**, a statistician and ecologist with over 20 years of experience in data analysis, advanced statistical modelling, and marine research.  
 
+Based on Auckland’s Hibiscus Coast, I founded Sea Through Science to partner with researchers, organisations, and communities — helping to **bring your data to life** and turn complexity into clear, actionable insights.
+
+## About Adam
+
+I bring a rare mix of skills as both a **professional statistician** and an **ecologist**. My career has included fieldwork in New Zealand and overseas, lecturing and supervising research at university level, and collaborating with government agencies, scientists, and community partners. I have authored over [60 peer-reviewed publications](https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ), reflecting a deep track record of rigorous, reproducible science.
+
+I also work as a statistical consultant for [PRIMER-e](https://www.primer-e.com/), with whom I have taught more than 20 intensive, week-long courses in multivariate statistics around the world — including with [NOAA](https://www.noaa.gov/) in Hawai‘i, the [University of Guam](https://www.uog.edu/), and institutions across South Africa, Australia, and New Zealand. These experiences have shaped my ability to explain complex methods clearly and help diverse audiences apply them with confidence.
+
+What drives me is making science **transparent, rigorous, and useful**. Whether through clear, customised analysis and presentation, conducting fisheries surveys, training scientists in advanced methods, or mentoring students on research design, my goal is to give clients clarity and confidence in their results.
 
 ## Education
 
-- BSc in Zoology from the University of Canterbury
-- P.G.Dip.Sci in Ecology from the University of Canterbury
-- MSc in Statistics with First Class Honours from the University of Auckland
-- PhD in Statistics from Massey University
+- **PhD in Statistics**, Massey University  
+- **MSc in Statistics (First Class Honours)**, University of Auckland  
+- **PGDipSci in Ecology**, University of Canterbury  
+- **BSc in Zoology**, University of Canterbury  
 
 ## Professional experience
 
-I have over 20 years experience as a scientist, having worked at the [Department of Conservation (DOC)](https://www.doc.govt.nz/), the [National Institute for Water and Atmospheric Research (NIWA)](https://www.niwa.co.nz), and for over ten years as a Lecturer/Senior Lecturer in Statistics at [Massey University](https://www.massey.ac.nz) Auckland. I have been a Workshop Instructor/Research Associate for [PRIMER-e](https://www.primer-e.co.nz) since 2017. 
+- Senior Lecturer in Statistics, Massey University (over a decade)  
+- Statistician, [Department of Conservation (DOC)](https://www.doc.govt.nz/) (3 years)  
+- Fisheries Scientist, [National Institute for Water and Atmospheric Research (NIWA)](https://www.niwa.co.nz) (3 years)  
+- Course Instructor & Statistical Consultant, [PRIMER-e](https://www.primer-e.com) (since 2017)  
 
 :::
 

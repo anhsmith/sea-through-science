@@ -10,19 +10,45 @@ about:
 
 ::: {#about-block}
 
+![](logo/bluebg_horiz.png){width=60%}
+
+
+## Clear science. Transparent results. 
+
+Need a statistician who understands biology and ecology?  
+Need an ecologist who understands statistics?  
+
+**Sea Through Science** is a boutique consulting company specialising in **statistical analysis, modelling, and marine research**.
+
+We combine expertise in ecology, fisheries, and data science with a commitment to clarity — helping you see through complexity to insights that matter.  
+
+---
+
+## What we do
+
+We help researchers, organisations, and communities turn data into clear, actionable knowledge:  
+
+- **Statistical consulting** – from study design to advanced modelling  
+- **Data analysis & reporting** – rigorous, reproducible, and tailored to your needs  
+- **Training & workshops** – practical courses in statistics and data analysis  
+- **Marine research** – innovative field studies using underwater video, tagging, diving, and more
+
 :::{style="text-align: center;"}
-![](logo/bluebg_horiz.png)
+[Explore all services](services/index.qmd){.btn-lg .btn-outline-success .btn role="button"}
 :::
 
-Need a statistician who understands biology and ecology?
+---
 
-Need a marine biologist who understands statistics? 
+## Why choose us?
 
-Sea Through Science is a boutique scientific consulting company, specialising in statistical analysis and modelling, data science, and education. We work primarily in the life sciences but we are not limited to any field or discipline. We also conduct original research in fisheries and marine ecology using cutting-edge technology such as telemetry and [baited underwater video](bruv/index.qmd).
+- **Clarity & transparency** – results you can trust, communicated without jargon  
+- **Cross-disciplinary expertise** – deep knowledge of both ecology and statistics
+- **Proven experience** – from international training courses to original marine research  
 
+---
 
 :::{style="text-align: center;"}
-[Get in touch!](mailto:'Adam Smith'<adam@seathrough.science>){.btn-lg .btn-outline-success .btn role="button"}
+[Get in touch!](mailto:'Adam Smith'<adam@seathrough.science>){.btn-lg .btn-success .btn role="button"}
 :::
 
 :::
