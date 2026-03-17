@@ -18,7 +18,7 @@ about:
       href: https://www.linkedin.com/in/adam-smith-1a723532/
     - icon: envelope
       text: "Send Adam an email"
-      href: "mailto:anhsmith@gmail.com"  
+      href: "mailto:adam@seathrough.science"  
 ---
 
 

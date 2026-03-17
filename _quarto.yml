@@ -8,8 +8,8 @@ website:
   title: "Sea Through Science"
   description: "Home website of Sea Through Science Ltd." 
   page-footer:
-    left: "&copy; Copyright 2024, Adam N. H. Smith<br>"
-    right: "This site is under construction with ❤️ and [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright <script>document.write(new Date().getFullYear())</script>, Adam N. H. Smith<br>"
+    right: "Built with ❤️ and [Quarto](https://quarto.org/)."
   favicon: /favicon/favicon-96x96.png
   navbar:
     pinned: true
@@ -23,6 +23,8 @@ website:
         href: services/index.qmd
       - text: "Who are we?"
         href: who/index.qmd
+      - text: "Publications"
+        href: publications/index.qmd
       - text: "BRUV"
         href: bruv/index.qmd
       - text: "BRUVmaps"

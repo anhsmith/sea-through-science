@@ -1,0 +1,10 @@
+---
+title: "Publications"
+bibliography: ../references.bib
+csl: ../int-res.csl
+nocite: '@*'
+---
+
+A full list of Adam's peer-reviewed publications. Also available on [Google Scholar](https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ).
+
+## References

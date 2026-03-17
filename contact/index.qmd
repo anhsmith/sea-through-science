@@ -13,6 +13,25 @@ Email: [adam@seathrough.science](mailto:"Adam Smith"<adam@seathrough.science>)
 
 Phone: [+64-21-0383941](tel:+64-21-0383941)
 
+**Based on Auckland's Hibiscus Coast, New Zealand (NZST, UTC+12/13)**
+
+---
+
+### What to include in your message
+
+- A brief description of your project or question
+- The type of data you have
+- Your timeline or any key deadlines
+- Any specific methods, tools, or outputs you have in mind
+
+---
+
+### Find us online
+
+- [{{< iconify fa6-brands google-scholar >}} Google Scholar](https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ)
+- [{{< iconify fa6-brands github >}} GitHub](https://github.com/anhsmith)
+- [{{< iconify fa6-brands linkedin >}} LinkedIn](https://www.linkedin.com/in/adam-smith-1a723532/)
+
 :::
 
 

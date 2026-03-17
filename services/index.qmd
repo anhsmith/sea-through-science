@@ -19,7 +19,7 @@ Our goal is to make complex science understandable, defensible, and useful for d
 
 ## Statistical Consulting
 
-- **Transparent analysis and reporting** — rigorous statistical methods my real experts, fully documented and communicated in plain language.  
+- **Transparent analysis and reporting** — rigorous statistical methods by real experts, fully documented and communicated in plain language.  
 - **Study design advice** — practical guidance on experimental design, survey planning, and data collection strategies.  
 - **Training and workshops** — tailored sessions to build capacity in statistics and modelling.  
 - **Editing and critique** — strengthen manuscripts, reports, and proposals with independent, constructive review.  
