@@ -1,0 +1,14 @@
+---
+title: "Interactive explorers"
+format:
+  html:
+    toc: true
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+Small self-contained apps for pulling a model apart and seeing what it does.
+
+[Shared-catch simulation model](stacks.qmd)

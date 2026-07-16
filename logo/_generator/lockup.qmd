@@ -1,0 +1,319 @@
+---
+title: "lockup — logo + wordmark"
+format:
+  html:
+    toc: true
+---
+
+Generates the logo + text lockups as self-contained SVG, replacing
+`sea-through-science/logo/brand.pptx`. The wordmark is IBM Plex Sans Medium
+converted to outlines — no font needs to be installed to build or to view, and
+the files render identically everywhere.
+
+Palette is background-dependent (decided July 2026): white-background lockups
+use the darkened "P2" tints, navy-background ones keep the original tints —
+see `pal_white` / `pal_navy` in `logoSTS2.qmd`.
+
+The glyph outlines live in `data/wordmark-glyphs.json` (13 glyphs, ~4 KB),
+extracted once with opentype.js. To change font, re-extract and re-render —
+every layout decision below is computed, not positioned by hand.
+
+```{r}
+#| label: setup
+#| message: false
+
+library(jsonlite)
+library(knitr)
+
+# Everything about the logo itself (curves, trim, taper, build_svg) comes from
+# logo.qmd — source its code rather than duplicating it. This also regenerates
+# the logo-*.svg finals in ../svg, which is idempotent.
+invisible(capture.output(
+  source(knitr::purl("logo.qmd", output = tempfile(fileext = ".R"), quiet = TRUE))
+))
+
+G <- fromJSON("data/wordmark-glyphs.json", simplifyVector = FALSE)
+
+navy    <- "#071739"     # dark panel colour, from the original brand.pptx
+ink_lt  <- "#111111"     # wordmark on light backgrounds
+ink_dk  <- "#FFFFFF"     # wordmark on dark backgrounds
+```
+
+## Typesetting
+
+Glyph outlines are stored at em = 1000 with the baseline at y = 0 (SVG y-down).
+opentype.js emits only M/L/Q commands, whose arguments are all x,y pairs, so a
+numeric transform of every pair suffices and each wordmark collapses into one
+flat `<path>`.
+
+```{r}
+#| label: make-typesetting
+
+xform_path <- function(d, s, px, py) {
+  segs <- regmatches(d, gregexpr("[A-Za-z][^A-Za-z]*", d))[[1]]
+  paste(vapply(segs, function(sg) {
+    cmd  <- substr(sg, 1, 1)
+    nums <- as.numeric(regmatches(sg, gregexpr("-?[0-9]*\\.?[0-9]+", sg))[[1]])
+    if (!length(nums)) return(cmd)
+    xy <- matrix(nums, ncol = 2, byrow = TRUE)
+    paste0(cmd, paste(sprintf("%s %s", num(px + xy[, 1] * s), num(py + xy[, 2] * s)),
+                      collapse = " "))
+  }, ""), collapse = "")
+}
+
+# Set runs of text; per-glyph advances, so proportional fonts work. Returns the
+# merged path and ink extents.
+lay <- function(runs, x = 0, baseline = 0) {
+  pen <- x; d <- character(0); ink <- numeric(0)
+  for (r in runs) for (ch in strsplit(r$text, "")[[1]]) {
+    gd <- G$glyphs[[ch]]
+    s  <- r$size / G$em
+    if (nzchar(gd)) {
+      d   <- c(d, xform_path(gd, s, pen, baseline))
+      ink <- c(ink, pen + G$ink[[ch]]$x1 * s, pen + G$ink[[ch]]$x2 * s)
+    }
+    pen <- pen + G$advance[[ch]] * s + r$track
+  }
+  list(d = paste(d, collapse = ""), x0 = min(ink), x1 = max(ink),
+       w = max(ink) - min(ink))
+}
+
+line_w <- function(text, size, track) {
+  lay(list(list(text = text, size = size, track = track)))$w
+}
+
+# The tracking that makes `text` span exactly `target`. This is what the old
+# pptx's hand-set +10pt on SCIENCE was reaching for — it landed 34% short.
+solve_track <- function(text, size, target) {
+  uniroot(function(k) line_w(text, size, k) - target,
+          c(-size, size * 4), tol = 1e-9)$root
+}
+```
+
+## Lockup geometry
+
+All in logo units (logo ink height = 100). The cap height and line gap were
+measured off the deployed `nobg_blwr_horiz.png`; the logo→text gap and panel
+padding were then tuned by eye against renders (July 2026).
+
+```{r}
+#| label: make-geometry
+
+cap1  <- 32.1    # SEA THROUGH cap height (measured off the original lockup)
+lgap  <- 14.8    # gap between the two lines (measured)
+gapx  <- 17      # logo -> text (tuned; the original measured 23.9 optically)
+pad   <- 14      # navy panel padding, top/left/bottom
+padr  <- 38      # panel runs further right: the wordmark ends in hard ink but
+                 # the logo side tapers to a sparse point, so equal padding
+                 # reads tighter on the right than it measures
+capu  <- G$capHeight / G$em
+```
+
+## Builder
+
+The two-line block is justified: `SEA THROUGH` is set naturally, and
+`SCIENCE`'s tracking is solved so both lines are exactly flush.
+
+```{r}
+#| label: make-builder
+
+wordmark <- function() {
+  s1 <- cap1 / capu
+  A  <- lay(list(list(text = "SEA THROUGH", size = s1, track = 0)))
+  s2 <- s1 * 0.75
+  B  <- lay(list(list(text = "SCIENCE", size = s2,
+                      track = solve_track("SCIENCE", s2, A$w))))
+  list(A = A, B = B, cap2 = s2 * capu, w = max(A$w, B$w))
+}
+
+logo_parts <- function(pal) {
+  svg <- build_svg("fill", t_px = t_px_final, sw_px = 1.5,
+                   taper = taper_final, cut = TRUE, pal = pal)
+  list(w    = as.numeric(sub('.*viewBox="0 0 ([0-9.]+) 100".*', "\\1", svg)),
+       body = sub("^<svg[^>]*>(.*)</svg>\n?$", "\\1", svg))
+}
+
+# layout: "horiz" (logo left of the block) or "stack" (logo above, centred).
+# banner = TRUE bakes in the rounded navy panel. The gaps between the logo's
+# shapes are transparent voids, so whatever is behind — the panel, a page, a
+# photo — shows through; no keyline colour exists anywhere.
+# `dark` selects the intended background, which only drives the palette now
+# (original tints on navy, darkened on white).
+build_lockup <- function(layout = "horiz", ink = ink_lt, banner = FALSE,
+                         dark = banner) {
+  lg <- logo_parts(if (dark) pal_navy else pal_white)
+  wm <- wordmark()
+  block <- cap1 + lgap + wm$cap2
+
+  if (layout == "horiz") {
+    tx  <- lg$w + gapx
+    top <- 50 - block / 2
+    W <- tx + wm$w; H <- 100
+    lx <- 0
+    ax <- tx - wm$A$x0
+    bx <- tx - wm$B$x0
+    ay <- top + cap1
+    by <- top + block
+  } else {
+    W  <- max(lg$w, wm$w); H <- 100 + gapx + block
+    lx <- (W - lg$w) / 2
+    ax <- (W - wm$A$w) / 2 - wm$A$x0
+    bx <- (W - wm$B$w) / 2 - wm$B$x0
+    ay <- 100 + gapx + cap1
+    by <- 100 + gapx + block
+  }
+
+  vb  <- if (banner) sprintf('viewBox="%s %s %s %s"',
+                             num(-pad), num(-pad), num(W + pad + padr), num(H + 2 * pad))
+         else        sprintf('viewBox="0 0 %s %s"', num(W), num(H))
+  bgr <- if (banner) sprintf('<rect x="%s" y="%s" width="%s" height="%s" rx="%s" fill="%s"/>',
+                             num(-pad), num(-pad), num(W + pad + padr), num(H + 2 * pad),
+                             num(pad), navy)
+         else ""
+  logo <- if (lx != 0) sprintf('<g transform="translate(%s 0)">%s</g>', num(lx), lg$body)
+          else lg$body
+
+  paste0(
+    sprintf('<svg xmlns="http://www.w3.org/2000/svg" %s>', vb),
+    bgr, logo,
+    sprintf('<path fill="%s" d="%s"/>', ink, xform_path(wm$A$d, 1, ax, ay)),
+    sprintf('<path fill="%s" d="%s"/>', ink, xform_path(wm$B$d, 1, bx, by)),
+    '</svg>\n'
+  )
+}
+```
+
+## Variants
+
+```{r}
+#| label: make-lockups
+
+lockups <- list(
+  `lockup-horiz`       = build_lockup("horiz", ink = ink_lt),                # white bg: P2
+  `lockup-horiz-white` = build_lockup("horiz", ink = ink_dk, dark = TRUE),   # dark bg: P0
+  `lockup-navy`        = build_lockup("horiz", ink = ink_dk, banner = TRUE), # navy panel: P0
+  `lockup-square`      = build_lockup("stack", ink = ink_lt)                 # white bg: P2
+)
+
+lockup_paths <- vapply(names(lockups), function(nm) {
+  f <- file.path("../svg", paste0(nm, ".svg"))
+  writeLines(lockups[[nm]], f, useBytes = TRUE)
+  f
+}, "")
+```
+
+## PNG export
+
+Rasterised straight from the shipped SVGs with librsvg, so the PNGs can never
+drift from the vectors. Backgrounds stay transparent except `lockup-navy`,
+whose panel is baked in. Heights: 34 (the small-size design target), 256
+(web/docs), 1024 (slides, print stand-in — though anything that accepts SVG
+should be given the SVG).
+
+```{r}
+#| label: make-pngs
+
+library(rsvg)
+
+png_heights <- c(34, 256, 1024)
+dir.create("../png", showWarnings = FALSE)
+
+all_svgs <- list.files("../svg", pattern = "^(logo|lockup)-.*\\.svg$", full.names = TRUE)
+
+png_paths <- unlist(lapply(all_svgs, function(f) {
+  vapply(png_heights, function(h) {
+    out <- file.path("../png", sprintf("%s-h%04d.png", sub("\\.svg$", "", basename(f)), h))
+    rsvg_png(f, out, height = h)
+    out
+  }, "")
+}))
+```
+
+```{r}
+#| label: tbl-pngs
+#| echo: false
+
+tibble::tibble(
+  file = basename(png_paths),
+  KB   = round(file.size(png_paths) / 1024, 1)
+) |>
+  kable(caption = sprintf("%d PNGs rendered from %d SVGs", length(png_paths), length(all_svgs)))
+```
+
+## Favicon
+
+The browser-tab icon and its home-screen / PWA siblings, built from the
+already-generated navy-palette mark so they can never drift from the logo. Two
+framings share the one mark: a **circle** with transparent corners for the tab
+(reads as a badge), and a **full navy square** for apple-touch and the maskable
+PWA icons (so the OS's own rounding/masking looks intentional, not clipped).
+Written up to `../../favicon/` — the site's conventional favicon location.
+
+```{r}
+#| label: make-favicon
+
+fav_dir <- "../../favicon"
+
+# reuse the shipped navy mark; strip its <svg> wrapper so it can be re-nested
+mark <- paste(readLines("../svg/logo-fill-navy.svg", warn = FALSE), collapse = "")
+mark_inner <- sub("</svg>\\s*$", "", sub("^<svg[^>]*>", "", mark))
+
+nest <- function(x, y, w, h) sprintf(
+  paste0('<svg x="%s" y="%s" width="%s" height="%s" viewBox="0 0 139.79 100"',
+         ' preserveAspectRatio="xMidYMid meet">%s</svg>'),
+  num(x), num(y), num(w), num(h), mark_inner)
+
+# mark 84% wide in the circle; 68% in the square (inside the maskable safe zone)
+fav_circle <- paste0('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">',
+  sprintf('<circle cx="50" cy="50" r="50" fill="%s"/>', navy),
+  nest(8, 20, 84, 60.1), '</svg>\n')
+fav_square <- paste0('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">',
+  sprintf('<rect width="100" height="100" fill="%s"/>', navy),
+  nest(16, 25.7, 68, 48.65), '</svg>\n')
+
+writeLines(fav_circle, file.path(fav_dir, "favicon.svg"), useBytes = TRUE)
+
+tmp_c <- tempfile(fileext = ".svg"); writeLines(fav_circle, tmp_c, useBytes = TRUE)
+tmp_s <- tempfile(fileext = ".svg"); writeLines(fav_square, tmp_s, useBytes = TRUE)
+
+# tab PNG (circle); home-screen / PWA PNGs (square)
+rsvg_png(tmp_c, file.path(fav_dir, "favicon-96x96.png"), width = 96, height = 96)
+rsvg_png(tmp_s, file.path(fav_dir, "apple-touch-icon.png"), width = 180, height = 180)
+rsvg_png(tmp_s, file.path(fav_dir, "web-app-manifest-192x192.png"), width = 192, height = 192)
+rsvg_png(tmp_s, file.path(fav_dir, "web-app-manifest-512x512.png"), width = 512, height = 512)
+
+# multi-size .ico (16/32/48) from the circle, via magick
+ico_pngs <- vapply(c(16L, 32L, 48L), function(h) {
+  p <- tempfile(fileext = ".png"); rsvg_png(tmp_c, p, width = h, height = h); p
+}, "")
+magick::image_write(
+  magick::image_join(lapply(ico_pngs, magick::image_read)),
+  file.path(fav_dir, "favicon.ico"), format = "ico")
+
+cat("favicon set written to", fav_dir, "\n")
+```
+
+```{r}
+#| label: tbl-justification
+#| echo: false
+
+wm <- wordmark()
+tibble::tibble(
+  line  = c("SEA THROUGH", "SCIENCE (justified)"),
+  width = c(wm$A$w, wm$B$w)
+) |>
+  kable(digits = 3, caption = "Both lines flush — the tracking is solved, not guessed")
+```
+
+```{r}
+#| label: tbl-lockup-size
+#| echo: false
+
+gz <- function(f) length(memCompress(readBin(f, "raw", file.size(f)), "gzip"))
+tibble::tibble(
+  file  = basename(lockup_paths),
+  bytes = file.size(lockup_paths),
+  gzip  = vapply(lockup_paths, gz, 0L)
+) |>
+  kable(caption = "Lockup sizes (the pptx these replace is 195 KB + font dependency)")
+```

@@ -1,0 +1,119 @@
+---
+title: "Shared-catch simulation model"
+format: html
+
+# NOTE: keep maintenance notes HERE, in YAML comments, not in an HTML comment in
+# the body -- pandoc passes <!-- --> straight through to the published page, so a
+# body comment puts all of this in public page source.
+#
+# apps/stacks-explorer-embed.html is a SNAPSHOT. It is generated in the
+# tnc001-belize-em repo by scratchpad/build_stacks_explorer.sh, from the source
+# app explorer/stacks-app.html. Taken at commit a1e7f19 ("lovely widget"). To
+# update it, rebuild there and re-copy -- do not edit it here.
+#
+# The <symbol id="tuna"> below is a second copy of that build's generated
+# fragment (scratchpad/tuna_symbol.html). The app carries its own copy, but that
+# one lives inside the iframe, and <use href="#tuna"> resolves by id within a
+# single document -- it cannot reach across the frame boundary. The inline fish
+# in the prose need this copy.
+---
+
+```{=html}
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+<defs>
+<symbol id="tuna" viewBox="0 0 1536 639" preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0,639) scale(0.1,-0.1)">
+<path d="M10399 6356 c-562 -107 -1046 -252 -1539 -459 -176 -74 -550 -260 -720 -358 -472 -271 -965 -642 -1356 -1021 -72 -71 -134 -128 -137 -128 -4 0 -36 20 -73 45 -116 77 -288 138 -499 175 -60 11 -245 33 -410 50 -453 46 -617 80 -790 165 -166 82 -259 177 -346 355 -101 205 -191 322 -285 371 l-46 24 -40 -45 c-57 -62 -143 -196 -184 -284 -95 -206 -152 -431 -194 -760 -11 -88 -21 -161 -23 -162 -1 -1 -65 -14 -142 -28 -401 -77 -831 -209 -1210 -373 -527 -228 -1008 -510 -1755 -1029 -135 -94 -335 -233 -445 -309 -110 -76 -202 -140 -204 -142 -9 -6 33 -83 58 -106 14 -14 58 -45 96 -70 80 -51 129 -99 144 -140 21 -55 18 -57 -71 -57 -131 0 -195 -27 -220 -90 -13 -34 3 -59 76 -118 128 -103 235 -146 549 -217 331 -74 376 -93 702 -285 305 -179 390 -215 622 -264 169 -35 283 -45 678 -56 417 -12 782 -44 1078 -95 148 -25 318 -127 842 -506 289 -208 447 -311 595 -386 96 -48 111 -53 173 -53 l67 0 1 38 c6 197 -26 306 -156 527 -31 53 -71 127 -89 165 -32 67 -73 196 -65 204 2 2 110 11 239 20 439 32 1098 114 1526 192 300 54 272 55 394 -8 58 -29 240 -144 405 -254 472 -316 610 -394 826 -470 398 -139 773 -230 1139 -276 142 -18 728 -18 870 0 148 19 431 68 520 91 l75 19 -235 -5 c-386 -9 -843 18 -1149 68 -484 77 -861 236 -1113 469 -84 78 -174 191 -238 300 -42 71 -120 255 -120 282 0 12 11 13 67 6 86 -12 202 3 285 37 80 32 148 77 271 179 112 93 204 152 262 167 61 17 163 6 230 -25 31 -14 59 -26 61 -26 2 0 4 27 4 60 0 102 29 137 163 200 l88 41 47 -23 c37 -18 62 -23 117 -22 81 1 120 17 262 100 188 111 275 138 359 115 30 -8 40 -8 43 2 7 24 97 102 141 124 32 15 78 24 161 32 168 14 313 50 633 156 476 159 715 205 1055 205 l137 0 165 -168 c91 -92 323 -341 517 -554 405 -446 599 -648 785 -817 377 -342 697 -556 1034 -690 105 -41 242 -85 227 -72 -5 4 -37 29 -72 55 -125 95 -257 244 -375 426 -87 134 -197 342 -420 790 -219 441 -277 542 -448 777 -185 253 -221 350 -222 593 -1 167 15 271 68 436 140 443 455 918 1091 1649 258 297 335 387 330 392 -7 8 -235 -71 -352 -122 -159 -68 -271 -130 -424 -233 -308 -207 -568 -459 -1020 -987 -385 -450 -662 -739 -860 -899 l-85 -68 -140 6 c-957 43 -1276 119 -1634 388 -88 66 -138 62 -177 -15 -28 -55 -65 -87 -99 -87 -48 0 -91 18 -102 43 -20 43 -66 88 -117 114 -47 24 -65 27 -231 34 -99 4 -194 12 -210 17 -94 28 -166 91 -213 185 l-29 58 -13 -32 c-63 -152 -226 -159 -376 -17 -56 52 -79 86 -100 142 l-10 30 -23 -48 c-42 -86 -126 -120 -226 -91 -99 28 -174 116 -191 223 -4 23 -8 42 -11 42 -2 0 -25 -11 -51 -24 -104 -53 -225 -70 -317 -45 -22 6 -97 37 -167 70 -154 72 -244 94 -332 81 -34 -6 -62 -9 -63 -8 -1 1 20 56 46 122 124 314 300 576 545 811 443 426 1063 712 2011 928 216 50 697 135 1012 181 68 10 122 19 120 20 -9 10 -519 51 -732 59 -130 4 -153 2 -316 -29z"/>
+<path d="M10490 2146 c0 -2 7 -7 16 -10 8 -3 12 -2 9 4 -6 10 -25 14 -25 6z"/>
+</g></symbol>
+</defs>
+</svg>
+```
+
+```{=html}
+<style>
+  /* sized to the silhouette's own 2.404 aspect ratio */
+  .fishicon { height: .78em; width: 1.88em; vertical-align: -.06em; }
+  /* The app will not reflow below ~435px -- the controls and the stack panel sit
+     side by side. Narrower than that it gets cut off, so let the frame keep its
+     width and scroll the WRAPPER sideways instead. The page body must never be
+     the thing that scrolls horizontally, and a scrollbar on the wrapper beats
+     one nested inside the iframe (nested scroll is miserable on touch). */
+  .explorer-wrap { overflow-x: auto; }
+  /* .column-page gives ~990px; centre a narrower frame in it. Floor on the width:
+     the stacks panel is responsive but bottoms out at ~779px, below which a
+     horizontal scrollbar appears INSIDE the app. That happens once the app drops
+     under ~779px, i.e. the frame under ~808px (frame minus the body's 2 x .9rem
+     padding). 840px keeps the app at ~811px — a slimmer window with ~30px of
+     clearance above that floor, verified scroller-free across M and re-simulate.
+     The height is only a FALLBACK for when the sizing script below cannot run.
+     The app's real height is not fixed: the stacks grow with M (614px at M=12,
+     785px at M=25 measured), and taller again once the controls wrap. */
+  .explorer-frame {
+    width: 100%; min-width: 460px; max-width: 840px; margin: 0 auto;
+    height: 900px; border: 0; display: block;
+  }
+</style>
+```
+
+Paired counts that are both correlated and overdispersed are hard to model well. So, we built a model for exactly that: a negative-binomial trivariate reduction, reparameterised so its parameters represent quantities of interest that are intuitive and meaningful. See how it works by adjusting the dials in the interactive panel below.
+
+Each longline set has a logbook (LB) count and an electronic monitoring (EM) count. Each count comprises fish seen by both methods (A = <svg class="fishicon" viewBox="0 0 1536 639" aria-hidden="true"><use href="#tuna" fill="#9C8B78"/></svg>) plus fish seen only by that method (LB-only = <svg class="fishicon" viewBox="0 0 1536 639" aria-hidden="true"><use href="#tuna" fill="#C4622D"/></svg>, EM-only = <svg class="fishicon" viewBox="0 0 1536 639" aria-hidden="true"><use href="#tuna" fill="#2D6A7F"/></svg>). M is the mean count, and congruence f is the fraction of it that is shared. The box on the left shows the model parameters; the ten stacks are sets randomly generated from the model. Non-zero bias β distributes the unshared fish unevenly between the two methods, without changing M. With κ = 0 each part of the count is generated by a Poisson distribution; with κ > 0, by a negative binomial (higher variance).
+
+```{=html}
+<div class="column-page explorer-wrap">
+<iframe src="apps/stacks-explorer-embed.html" class="explorer-frame"
+        title="Shared-catch simulation model"></iframe>
+</div>
+<script>
+  // Match the frame to the app. The app is same-origin, so we can just read its
+  // height -- no postMessage handshake needed.
+  //
+  // The height is NOT constant: the stacks grow with M (449px at M=1, 785px at
+  // M=25), so a one-shot measure on load clips the app at high M.
+  //
+  // The obvious tool is a ResizeObserver on the app's body, and it is here -- but
+  // it is NOT what this relies on. Measured in-page, the body's clientHeight
+  // updates 629 -> 785 on an M change while the observer fires zero times: layout
+  // runs, but the resize notification never gets delivered. So the load-bearing
+  // mechanism is the event listeners. The app only ever changes height in
+  // response to a slider or the re-simulate button, so listening for those on the
+  // app's document catches every real case. The observer stays as a backstop for
+  // anything the events miss (e.g. a viewport reflow).
+  (function () {
+    var f = document.querySelector('iframe.explorer-frame');
+    if (!f) return;
+    function fit() {
+      var d = f.contentDocument;
+      if (!d || !d.body) return;
+      f.style.height = d.body.scrollHeight + 'px';
+    }
+    function attach() {
+      var d = f.contentDocument;
+      if (!d || !d.body) return;
+      fit();
+      // The app draws its SVG after load, settling ~4px shorter than the first
+      // measurement. Re-fit a few times so the frame lands on the final height
+      // rather than the one that existed for a frame and a half.
+      [50, 250, 1000].forEach(function (t) { setTimeout(fit, t); });
+      try { new ResizeObserver(fit).observe(d.body); } catch (e) {}
+      // capture phase: fire even though the app stops these on its own handlers
+      ['input', 'change', 'click'].forEach(function (ev) {
+        d.addEventListener(ev, function () { setTimeout(fit, 0); }, true);
+      });
+      window.addEventListener('resize', fit);
+    }
+    f.addEventListener('load', attach);
+    // may already be loaded by the time this runs -- 'load' would not refire
+    try {
+      if (f.contentDocument && f.contentDocument.readyState === 'complete') attach();
+    } catch (e) {}
+  })();
+</script>
+```
+
+---
+
+Built by Sea Through Science as part of a project to evaluate electronic monitoring of Belize-flagged longline vessels, and how this method compares with logbook data — a project run in collaboration with [JPEC Consulting](https://jpec.co.nz/){target="_blank"} for [The Nature Conservancy](https://www.nature.org){target="_blank"}.
+
+Tuna silhouette: *Thunnus albacares* by T. Michael Keesey, [PhyloPic](https://www.phylopic.org/images/f4503c9f-35df-4a0d-a6ca-c66c87d68274){target="_blank"}, public domain.

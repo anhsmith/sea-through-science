@@ -4,9 +4,6 @@ about:
   id: about-block
   image: ../img/adam110.jpg
   image-shape: rounded
-navbar:
-  pinned: true
-  logo: /img/logo.png
 ---
 
 # Services
@@ -36,6 +33,30 @@ Our goal is to make complex science understandable, defensible, and useful for d
   - **Satellite and dart tagging** for movement and behaviour studies  
   - **Intertidal and subtidal sediment cores** for benthic and environmental analysis  
   - …and more  
+
+---
+
+## Who we've worked with
+
+Our work spans government, academia, industry, and the not-for-profit sector — in New Zealand and abroad.
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+- [PRIMER-e](https://www.primer-e.com/){target="_blank"}
+- [Fisheries New Zealand](https://www.mpi.govt.nz/fishing-aquaculture){target="_blank"}
+- [Department of Conservation](https://www.doc.govt.nz/){target="_blank"}
+- [Northland Regional Council](https://www.nrc.govt.nz/){target="_blank"}
+- [University of Auckland](https://www.auckland.ac.nz/){target="_blank"}
+- [JPEC Consulting](https://jpec.co.nz/){target="_blank"}
+- [Veterinary Specialists Aotearoa](https://www.vsahospital.co.nz/){target="_blank"}
+:::
+::: {.g-col-12 .g-col-md-6}
+- [The Nature Conservancy](https://www.nature.org/){target="_blank"}
+- [University of Hawaiʻi](https://hilo.hawaii.edu/){target="_blank"}
+- [New Mexico State University](https://www.nmsu.edu/){target="_blank"}
+- [Melbourne Water](https://www.melbournewater.com.au/){target="_blank"}
+:::
+:::
 
 ---
 

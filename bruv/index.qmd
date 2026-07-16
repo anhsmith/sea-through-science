@@ -4,6 +4,10 @@ title-block-style: default
 title: "Baited Remote Underwater Video<br><br><br><br><br><br><br><br><br><br><br><br>"
 bibliography: ../references.bib
 csl: ../nature.csl
+execute:
+  echo: false
+  message: false
+  warning: false
 ---
 
 ## The BRUV method
@@ -16,6 +20,44 @@ Stereo Baited Remote Underwater Video (BRUV or SBRUV) is a way of surveying fish
 The BRUV method has several advantages over other methods of sampling fish: it is efficient, standardised, non-destructive, and generally less species- and size-selective. The video footage becomes a permanent record of the habitat and biological community.
 
 Sea Through Science has extensive experience conducting underwater surveys worldwide, from the Galapagos Islands [@smith_instantaneous_2020; @acuna-marrero_spatial_2018] to Fiordland, New Zealand. We've worked in diverse environments, including coral reefs in Fiji and Tonga, remote ecosystems like Rangitāhua/Kermadec Islands, and marine reserves in the Hauraki Gulf [@smith_effects_2014; @smith_incorporating_2012]." Adam co-authored the guide to the BRUV method [@langlois_field_2020] and publications in *Nature* [@macneil_global_2020] and *Science* [@simpfendorfer_widespread_2023] as part of the [Global FinPrint](https://globalfinprint.org/) project.
+
+## Our BRUV campaigns
+
+Explore where we've worked. Each map is interactive — pan, zoom, and click a deployment to see what we found there.
+
+::: {.panel-tabset}
+
+## Bay of Islands 2025
+
+```{r}
+readRDS("../bruvmaps/map_objects/mapview_boi.rds")
+```
+
+## Otago 2025
+
+```{r}
+readRDS("../bruvmaps/map_objects/mapview_ota.rds")
+```
+
+## Fiordland 2024-25
+
+```{r}
+readRDS("../bruvmaps/map_objects/mapview_fld.rds")
+```
+
+## Hauraki Gulf 2024
+
+```{r}
+readRDS("../bruvmaps/map_objects/mapview_hau.rds")
+```
+
+## Southwest Pacific 2017
+
+```{r}
+readRDS("../bruvmaps/map_objects/mapview_swp.rds")
+```
+
+:::
 
 ## Footage from our BRUVs
 

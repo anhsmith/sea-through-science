@@ -3,8 +3,16 @@
 // Import fonts
 @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 
-.navbar-logo {
-  min-height: 50px;
+// The lockup SVGs carry a viewBox but no width/height, so they have no intrinsic
+// size. Quarto's own `.navbar-logo { max-height: 24px }` then clamps them; the
+// old PNGs escaped it because their `min-height: 50px` beat the max (min wins
+// over max in CSS), but an SVG with no intrinsic height needs an explicit one.
+// The parent-class selector outranks Quarto's single-class rule so max-height
+// lifts cleanly, no !important needed.
+.navbar-brand-logo .navbar-logo {
+  height: 50px;
+  max-height: 50px;
+  width: auto;
 }
 
 .navbar-brand h1, .navbar-title {

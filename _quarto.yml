@@ -1,19 +1,37 @@
 project:
   type: website
   output-dir: docs
+  # The slides/ reveal deck copies its .qmd into the output during render; left
+  # there it breaks the next render (docs/docs/ nesting). This cleanup deletes
+  # such strays after every render, automatically — see _clean-strays.R.
+  post-render:
+    - _clean-strays.R
   resources:
     - CNAME
+    # Raw self-contained explorer apps. Quarto would probably discover these via
+    # the iframe src, but relying on that is how you get a 404 in production.
+    - interactive/apps/**
+    # Whole favicon set. The manifest PNGs are referenced only inside
+    # site.webmanifest (JSON), which Quarto's resource scan can't see, so copy
+    # the folder wholesale.
+    - favicon/**
 
 website:
   title: "Sea Through Science"
-  description: "Home website of Sea Through Science Ltd." 
+  description: "Boutique consulting in statistical analysis, modelling, and marine research."
+  # Absolute base URL so social-card image/url tags resolve for LinkedIn etc.
+  site-url: https://www.seathrough.science
+  # Default preview image for social shares (pages can override with their own image:)
+  image: /img/plotnice3.png
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
   page-footer:
     left: "&copy; Copyright <script>document.write(new Date().getFullYear())</script>, Adam N. H. Smith<br>"
     right: "Built with ❤️ and [Quarto](https://quarto.org/)."
-  favicon: /favicon/favicon-96x96.png
   navbar:
     pinned: true
-    logo: /logo/nobg_whwr_horiz.png
+    logo: /logo/svg/lockup-horiz-white.svg
 
     # your sub-pages
     left:
@@ -27,16 +45,13 @@ website:
         href: publications/index.qmd
       - text: "BRUV"
         href: bruv/index.qmd
-      - text: "BRUVmaps"
+      # BRUVmaps was its own navbar item; the campaign maps now live in a
+      # section on the BRUV page, where the prose already tells that story.
+      # The map pages themselves are unmoved (bruvmaps/*.qmd).
+      - text: "Interactive"
         menu:
-          - text: "Otago 2025"
-            href: bruvmaps/otago.qmd
-          - text: "Fiordland 2024-25"
-            href: bruvmaps/fiordland.qmd
-          - text: "Hauraki Gulf 2024"
-            href: bruvmaps/hauraki.qmd
-          - text: "Southwest Pacific 2017"
-            href: bruvmaps/swpacific.qmd
+          - text: "Shared-catch model"
+            href: interactive/stacks.qmd
       - text: "Slides"
         href: slides/slides.qmd
       - text: "Contact"
@@ -58,7 +73,11 @@ website:
 format:
   html:
     fontsize: 1.1em
-    theme: 
+    # Full favicon set (svg tab icon + png/ico fallbacks + apple-touch + PWA
+    # manifest), generated from the logo by logo/_generator/lockup.qmd.
+    include-in-header:
+      - _favicon-head.html
+    theme:
       dark: [darkly, theme_darkly.scss, styles.scss]
       light: [flatly, theme_flatly.scss, styles.scss]
     toc: false

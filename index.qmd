@@ -1,5 +1,11 @@
 ---
 title: ""
+# pagetitle drives <title> + og:title without rendering a visible heading
+# (the page keeps title: "" so the logo carries the branding, not an h1).
+pagetitle: "Sea Through Science"
+description: "Boutique consulting in statistical analysis, modelling, and marine research."
+# Raster social-card image (og:image); SVG is rejected by most social platforms.
+image: /img/plotnice3.png
 about:
   template: solana
   id: about-block
@@ -10,7 +16,7 @@ about:
 
 ::: {#about-block}
 
-![](logo/bluebg_horiz.png){width=60%}
+![](logo/svg/lockup-navy.svg){width=60% fig-alt="Sea Through Science"}
 
 
 ### Clear science. Transparent results. 

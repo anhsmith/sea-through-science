@@ -1,0 +1,733 @@
+---
+title: "logoSTS2 — vector logo generator"
+format:
+  html:
+    toc: true
+---
+
+Generates the logo as fitted-bézier SVG. All SVG output goes to `../svg`
+(the `logo/svg/` folder, from this `_generator/` dir); the preview stays local.
+
+The logo is three Gaussians, drawn twice under a 180° rotation:
+
+| curve | definition            | role                                |
+|-------|-----------------------|-------------------------------------|
+| `y`   | `dnorm(x)`            | outer silhouette                    |
+| `y2`  | `dnorm(x, .6, .7)/2`  | inner divide, left                  |
+| `y3`  | `dnorm(x, -.6, .7)/2` | inner divide, right                 |
+
+```{r}
+#| label: setup
+#| message: false
+
+library(tibble)
+library(dplyr)
+library(knitr)
+
+# Finals land in ../svg (logo/svg/); working files (preview.html) stay here in
+# _generator/.
+dir.create("../svg", showWarnings = FALSE)
+
+# Palette (decided July 2026): the original tints are kept for navy/dark
+# backgrounds, where they pop (7-13:1). On white they measure only 1.56:1 and
+# 2.86:1 and the mark washes out next to any text, so white-background assets
+# use a darkened pair with the same two hues. The pair is deliberately
+# asymmetric ("PX"): a deep blue anchor (4.48:1 vs white) under an aqua kept
+# light on purpose — darkening both tints together compresses the internal
+# light:dark contrast to ~1.5, while this mix holds it at 1.89, slightly above
+# the original palette's 1.84. The mark stays two interleaved waves, not one
+# teal blob.
+pal_navy  <- c(light = "#99D9EA", dark = "#00A2E8")   # original tints
+pal_white <- c(light = "#54B5CB", dark = "#027DBF")   # "PX" for white
+navy      <- "#071739"
+
+# Design targets. Thresholds and stroke widths are quoted in px at the 34px
+# target height, because that is the size the decisions are actually made at.
+h_target <- 34
+```
+
+## Curves
+
+A Gaussian carries its own analytic derivative, so the bézier fit needs no
+numerical differentiation:
+
+$$\frac{d}{dx}\, k\,\phi(x;\mu,\sigma) \;=\; -\,k\,\phi(x;\mu,\sigma)\,\frac{x-\mu}{\sigma^2}$$
+
+```{r}
+#| label: make-curves
+
+gauss <- function(mu = 0, sd = 1, k = 1) {
+  list(
+    f  = function(x) k * dnorm(x, mu, sd),
+    fp = function(x) -k * dnorm(x, mu, sd) * (x - mu) / sd^2,
+    mu = mu,
+    sd = sd
+  )
+}
+
+negate <- function(cur) {
+  list(
+    f    = function(x) -cur$f(x),
+    fp   = function(x) -cur$fp(x),
+    mu   = cur$mu,
+    sd   = cur$sd,
+    feat = cur$feat
+  )
+}
+
+# A Gaussian tail is asymptotic, so trimming it at any height t leaves an end of
+# height 2t — a blunt cut. Small t fades out naturally but keeps the bounding box
+# wide; large t is compact but visibly chopped. Multiplying by a window that
+# reaches exactly zero at x_end buys both: the silhouette keeps its Gaussian
+# shape out to x_a, then closes to a genuine point.
+#
+#   w(u) = 1 - u²,  u = (|x| - x_a) / (x_end - x_a) clamped to [0, 1]
+#
+# w'(0) = 0 so the join at x_a is C1 (no kink); w(1) = 0 exactly, and w'(1) = -2
+# so the tip arrives at the axis with a definite angle rather than flattening
+# into it. |x| keeps the window symmetric, which is what the outer silhouette
+# wants. Apply it to all three curves, never just the silhouette: a shared window
+# cancels out of any crossing (see make-crossings), so the shapes stay closed and
+# both fill boundaries reach zero at exactly the same point.
+taper_curve <- function(cur, x_a, x_end) {
+  force(cur)   # the returned closures capture it; leaving it a promise would
+               # let `c <- taper_curve(c, ...)` resolve back onto itself
+  h <- x_end - x_a
+  u <- function(x) pmin(pmax((abs(x) - x_a) / h, 0), 1)
+  list(
+    f  = function(x) cur$f(x) * (1 - u(x)^2),
+    fp = function(x) {
+      uu <- u(x)
+      dw <- ifelse(uu > 0 & uu < 1, -2 * uu / h * sign(x), 0)
+      cur$fp(x) * (1 - uu^2) + cur$f(x) * dw
+    },
+    mu   = cur$mu,
+    sd   = cur$sd,
+    feat = c(cur$feat, -x_a, x_a)   # seed the knot fitter at the window join
+  )
+}
+
+cur_y  <- gauss(  0.0, 1.0, 1.0)
+cur_y2 <- gauss(  0.6, 0.7, 0.5)
+cur_y3 <- gauss( -0.6, 0.7, 0.5)
+
+# The crossings below are computed on the untapered Gaussians and stay valid with
+# the taper on. The taper multiplies all three curves by the same window w(|x|),
+# and a(x) = b(x) implies a(x)w(x) = b(x)w(x), so every crossing survives exactly
+# — wherever the window happens to start. (Worth stating: at large t the window
+# does reach inside x_tip_r, so "the window never touches a crossing" would be
+# the wrong reason to believe this.)
+
+y_max <- cur_y$f(0)                 # 0.3989
+s34   <- h_target / (2 * y_max)     # px per data unit at the target height
+```
+
+## Exact geometry
+
+`logoSTS.qmd` locates the shape tips by scanning a 500-point grid
+(`which.max(y2 > y)`), which quantises them to the grid. `uniroot` on the
+analytic difference puts them exactly where they belong.
+
+```{r}
+#| label: make-crossings
+
+cross <- function(a, b, interval) {
+  uniroot(
+    f        = function(x) a$f(x) - b$f(x),
+    interval = interval,
+    tol      = .Machine$double.eps^0.5
+  )$root
+}
+
+solve_h <- function(cur, t, interval) {
+  uniroot(
+    f        = function(x) cur$f(x) - t,
+    interval = interval,
+    tol      = .Machine$double.eps^0.5
+  )$root
+}
+
+x_tip_l <- cross(cur_y2, cur_y,  c(-1, 1))   # light-blue tip
+x_tip_r <- cross(cur_y2, cur_y,  c( 1, 4))   # dark-blue notch
+x_mid   <- cross(cur_y3, cur_y2, c(-2, 2))   # 0, by symmetry
+```
+
+```{r}
+#| label: tbl-crossings
+#| echo: false
+
+tibble(
+  crossing = c("y2 = y (tip)", "y2 = y (notch)", "y3 = y2 (mid)"),
+  x        = c(x_tip_l, x_tip_r, x_mid)
+) |>
+  kable(digits = 6, caption = "Exact crossings")
+```
+
+## Hermite → cubic bézier
+
+For a knot span `[x0, x1]` with `h = x1 - x0`, the Hermite construction gives a
+cubic bézier that matches value *and* slope at both ends. The control x are
+equally spaced, so `x(t) = x0 + h·t` exactly and each segment stays a function
+graph — no self-intersection, and the fit error is a plain vertical distance.
+
+Error is O(h⁴), so knots are placed adaptively: seed with the feature points
+(peak, inflections at μ±σ, and any crossing that must be hit exactly), then
+bisect any span still outside `tol`.
+
+```{r}
+#| label: make-bezier
+
+bez_ctrl <- function(cur, x0, x1) {
+  h <- x1 - x0
+  rbind(
+    c(x0,       cur$f(x0)),
+    c(x0 + h/3, cur$f(x0) + cur$fp(x0) * h/3),
+    c(x1 - h/3, cur$f(x1) - cur$fp(x1) * h/3),
+    c(x1,       cur$f(x1))
+  )
+}
+
+bez_y <- function(P, t) {
+  sum(c((1-t)^3, 3*(1-t)^2*t, 3*(1-t)*t^2, t^3) * P[, 2])
+}
+
+seg_err <- function(cur, x0, x1, ts = seq(0.1, 0.9, by = 0.1)) {
+  P <- bez_ctrl(cur, x0, x1)
+  max(abs(vapply(ts, function(t) bez_y(P, t) - cur$f(x0 + (x1 - x0) * t), 0)))
+}
+
+features <- function(cur) c(cur$mu, cur$mu - cur$sd, cur$mu + cur$sd, cur$feat)
+
+fit_knots <- function(cur, x0, x1, tol) {
+  feat <- features(cur)
+  ks   <- sort(unique(c(x0, x1, feat[feat > x0 & feat < x1])))
+  for (iter in 1:24) {
+    err <- vapply(seq_len(length(ks) - 1), function(i) seg_err(cur, ks[i], ks[i+1]), 0)
+    bad <- which(err > tol)
+    if (!length(bad)) return(ks)
+    ks <- sort(unique(c(ks, (ks[bad] + ks[bad + 1]) / 2)))
+  }
+  stop("fit_knots failed to converge")
+}
+```
+
+## Path emission
+
+The viewBox is 100 units tall, so one unit is 1% of logo height and 2 dp
+coordinates quantise to 0.01% — 0.04px even at a 400px render.
+
+```{r}
+#| label: make-emit
+
+num <- function(v) {
+  s <- formatC(round(v, 2), format = "f", digits = 2)
+  s <- sub("(\\.[0-9]*?)0+$", "\\1", s)
+  s <- sub("\\.$", "", s)
+  sub("^-0$", "0", s)
+}
+
+# The logo is NOT drawn to an equal aspect, and this is load-bearing. The original
+# maps x ∈ [-3.6, 3.6] across 3in and y ∈ [-0.504, 0.504] down 2in
+# (`dataViewport(extension = 0.1)` in logoSTS.qmd on a 3x2in device), so
+#
+#   sx = 216pt / 7.2 = 30 pt/unit      sy = 144pt / 1.008 = 142.86 pt/unit
+#
+# i.e. y is stretched 4.76x relative to x. Scaling both axes by one factor
+# collapses the whole thing onto the axis — the curves are only ~0.4 units tall
+# but 6 units wide.
+y_stretch <- (144 / 1.008) / (216 / 7.2)   # 4.7619
+
+make_map <- function(x_end, pad) {
+  sy <- (100 - 2 * pad) / (2 * y_max)
+  sx <- sy / y_stretch
+  list(
+    X = function(x) pad + (x + x_end) * sx,
+    Y = function(y) 50 - y * sy,
+    W = 2 * x_end * sx + 2 * pad,
+    sx = sx,
+    sy = sy
+  )
+}
+
+pt_at <- function(cur, x, map) c(map$X(x), map$Y(cur$f(x)))
+
+# `lead` is "M", "L" or "" (continue from the current point).
+arc_d <- function(cur, x0, x1, map, tol, lead) {
+  ks  <- fit_knots(cur, min(x0, x1), max(x0, x1), tol)
+  if (x0 > x1) ks <- rev(ks)
+  out <- character(0)
+  if (nzchar(lead)) {
+    out <- sprintf("%s%s %s", lead, num(map$X(ks[1])), num(map$Y(cur$f(ks[1]))))
+  }
+  for (i in seq_len(length(ks) - 1)) {
+    P <- bez_ctrl(cur, ks[i], ks[i+1])
+    out <- c(out, sprintf(
+      "C%s %s %s %s %s %s",
+      num(map$X(P[2,1])), num(map$Y(P[2,2])),
+      num(map$X(P[3,1])), num(map$Y(P[3,2])),
+      num(map$X(P[4,1])), num(map$Y(P[4,2]))
+    ))
+  }
+  paste(out, collapse = "")
+}
+
+# arcs: list of list(curve, x_from, x_to), walked in order. Consecutive arcs meet
+# either at a crossing (continuous — keep drawing) or at a tip edge, where e.g.
+# y3 ~ 0 but y = t; that gap needs an explicit L or the next arc would silently
+# start from the wrong point.
+shape_d <- function(arcs, map, tol, close = TRUE) {
+  d    <- character(0)
+  here <- NULL
+  for (a in arcs) {
+    cv <- a[[1]]; x0 <- a[[2]]; x1 <- a[[3]]
+    p0   <- pt_at(cv, x0, map)
+    lead <- if (is.null(here)) "M" else if (max(abs(p0 - here)) > 0.005) "L" else ""
+    d    <- c(d, arc_d(cv, x0, x1, map, tol, lead))
+    here <- pt_at(cv, x1, map)
+  }
+  paste0(paste(d, collapse = ""), if (close) "Z" else "")
+}
+```
+
+## Trim rule
+
+One rule, for both fills and wires: everything is cut at a single `x_end`, where
+the silhouette `y` has fallen to `t`, and the taper closes the shape to a point
+there. Every curve — `y`, `y2`, `y3` — runs to that same `x_end`, so the whole
+figure converges on two points.
+
+`t` therefore sets **where the tip lands**, not how blunt it is; the taper
+guarantees the point either way. Bigger `t` = a shorter, fatter logo.
+
+A per-curve height threshold (`inner_trim = "height"`) is kept for comparison but
+is not the default. It seems reasonable — cut each curve once it's flat and
+hugging the axis — but a Gaussian tail is flat *wherever* you cut it, so it
+always leaves the curve ending in a floating horizontal stub. Trimming the tails
+is the taper's job.
+
+Note the fills never wanted a per-curve threshold anyway: at x = −1.1 the lens is
+still ~0.2 units thick, so cutting the lower boundary at its own height would
+slice the shape open rather than tidy it.
+
+```{r}
+#| label: make-trim
+
+trim_points <- function(t_px) {
+  t <- t_px / s34
+  list(
+    t     = t,
+    x_end = solve_h(cur_y,  t, c(0, 6)),
+    x2_l  = solve_h(cur_y2, t, c(-6, cur_y2$mu)),
+    x3_r  = solve_h(cur_y3, t, c(cur_y3$mu, 6))
+  )
+}
+
+# The three curves as actually drawn, so the builder and the accuracy check
+# always agree on what is being shipped.
+logo_curves <- function(t_px, taper = TRUE, taper_from = 4) {
+  tr <- trim_points(t_px)
+  if (!taper) {
+    return(c(tr, list(y = cur_y, y2 = cur_y2, y3 = cur_y3, x_a = NA)))
+  }
+  # The taper starts where y has fallen to taper_from * t, which only exists if
+  # that height is below the peak. Beyond it uniroot fails obscurely.
+  if (taper_from * tr$t >= y_max) {
+    stop(sprintf(
+      "t_px = %.2f is too large for taper_from = %g: the taper would start above the peak (max t_px is %.2f).",
+      t_px, taper_from, y_max * s34 / taper_from
+    ))
+  }
+  x_a <- solve_h(cur_y, taper_from * tr$t, c(0, tr$x_end))
+  c(tr, list(
+    y   = taper_curve(cur_y,  x_a, tr$x_end),
+    y2  = taper_curve(cur_y2, x_a, tr$x_end),
+    y3  = taper_curve(cur_y3, x_a, tr$x_end),
+    x_a = x_a
+  ))
+}
+```
+
+```{r}
+#| label: tbl-trim
+#| echo: false
+
+c(0.5, 1.0, 1.5, 2.0) |>
+  lapply(function(tp) {
+    tr <- trim_points(tp)
+    tibble(
+      `t (px @34px)` = tp,
+      `t (data)`     = tr$t,
+      `x_end`        = tr$x_end,
+      `y2 left end`  = tr$x2_l,
+      `y3 right end` = tr$x3_r,
+      `width kept`   = tr$x_end / 3
+    )
+  }) |>
+  bind_rows() |>
+  kable(digits = 4, caption = "Trim points by threshold (untrimmed x_end = 3)")
+```
+
+## Builders
+
+```{r}
+#| label: make-build
+
+# The lower half is the upper half rotated 180°, which `<defs>` + `<use>` would
+# express in ~600 fewer bytes. Not worth it: inline SVG shares the host page's id
+# space, so two of these in one HTML document (or the same one twice — header and
+# footer) collide on `#h` and every `<use>` resolves to the first match. Emitting
+# the paths twice keeps each file self-contained and inline-safe, and we are ~6x
+# under the size budget anyway. `use_symmetry = TRUE` is kept for measuring.
+emit_halves <- function(grp, rot, use_symmetry) {
+  if (use_symmetry) {
+    paste0(
+      '<defs><g id="h">', grp, '</g></defs>',
+      '<use href="#h"/>',
+      sprintf('<use href="#h" transform="%s"/>', rot)
+    )
+  } else {
+    paste0(
+      '<g>', grp, '</g>',
+      sprintf('<g transform="%s">', rot), grp, '</g>'
+    )
+  }
+}
+
+# Deterministic short id from content: identical content always gets the same
+# id, so if two copies of one asset are inlined in one HTML page, their mask ids
+# collide *benignly* (same id, same content). Different assets hash differently.
+svg_id <- function(s) {
+  h <- 0
+  for (b in utf8ToInt(s)) h <- (h * 31 + b) %% 999999937
+  sprintf("cut%x", h)
+}
+
+# cut = TRUE erases the shape boundaries to TRANSPARENT (mask), rather than
+# painting them white/navy. The old painted keyline only worked on a matching
+# background; the void works on anything. sw_px still sets the gap width.
+build_svg <- function(kind,
+                      t_px         = 1.0,
+                      sw_px        = 1.0,
+                      tol_px       = 0.005,
+                      pal          = pal_white,
+                      cut          = FALSE,
+                      stroke       = "black",
+                      tip_join     = TRUE,
+                      inner_trim   = c("tip", "height"),
+                      taper        = TRUE,
+                      taper_from   = 4,
+                      use_symmetry = FALSE) {
+
+  inner_trim <- match.arg(inner_trim)
+
+  tol <- tol_px / s34
+  u   <- 100 / h_target            # viewBox units per px-at-target
+
+  # Taper begins where the silhouette has fallen to taper_from * t and runs to
+  # x_end, so t sets where the point lands and the shape reaches zero there.
+  tr   <- logo_curves(t_px, taper, taper_from)
+  c_y  <- tr$y
+  c_y2 <- tr$y2
+  c_y3 <- tr$y3
+
+  # padding only matters where a stroke paints outside the outline; the cut
+  # erodes inward, so fills never need it
+  pad <- if (kind == "fill") 0 else sw_px * u / 2 + 0.25
+  map <- make_map(tr$x_end, pad)
+  sw  <- sw_px * u
+  rot <- sprintf("rotate(180 %s 50)", num(map$W / 2))
+
+  if (kind == "fill") {
+    p1 <- shape_d(
+      list(
+        list(c_y,  -tr$x_end, x_tip_l),
+        list(c_y2, x_tip_l,   -tr$x_end)
+      ),
+      map, tol
+    )
+    p2 <- shape_d(
+      list(
+        list(c_y3, x_mid,    tr$x_end),
+        list(c_y,  tr$x_end, x_tip_r),
+        list(c_y2, x_tip_r,  x_mid)
+      ),
+      map, tol
+    )
+    grp    <- sprintf('<path fill="%s" d="%s"/><path fill="%s" d="%s"/>',
+                      pal[["light"]], p1, pal[["dark"]], p2)
+    halves <- emit_halves(grp, rot, use_symmetry)
+    if (cut) {
+      # Erase the boundaries instead of painting them: the mask is white
+      # (keep) everywhere, with every shape outline stroked black (erase) at
+      # the gap width. Shared boundaries lose sw/2 from each side -> a void of
+      # exactly sw, through which any background shows.
+      outlines <- sprintf('<path d="%s"/><path d="%s"/>', p1, p2)
+      mid <- svg_id(paste(outlines, num(sw)))
+      halves <- paste0(
+        sprintf('<mask id="%s" maskUnits="userSpaceOnUse" x="0" y="0" width="%s" height="100">',
+                mid, num(map$W)),
+        sprintf('<rect width="%s" height="100" fill="#fff"/>', num(map$W)),
+        sprintf('<g fill="none" stroke="#000" stroke-width="%s" stroke-linejoin="round">%s<g transform="%s">%s</g></g>',
+                num(sw), outlines, rot, outlines),
+        '</mask>',
+        sprintf('<g mask="url(#%s)">', mid), halves, '</g>'
+      )
+    }
+    gattr  <- ""
+
+  } else {
+    # "tip" (default): run y2/y3 out to x_end. The taper drives them to zero
+    # there, so every curve converges on the same two points as the lens outline
+    # and the figure closes.
+    # "height": cut them where their own height drops below t. A Gaussian tail is
+    # flat wherever you cut it, so this always ends the curve in a floating
+    # horizontal stub — the tidying is the taper's job, not a height threshold's.
+    inner_l <- if (inner_trim == "tip") -tr$x_end else tr$x2_l
+    inner_r <- if (inner_trim == "tip")  tr$x_end else tr$x3_r
+    w2  <- shape_d(list(list(c_y2, inner_l, x_tip_l)), map, tol, close = FALSE)
+    w3  <- shape_d(list(list(c_y3, x_mid,   inner_r)), map, tol, close = FALSE)
+    grp <- sprintf('<path d="%s"/><path d="%s"/>', w2, w3)
+
+    if (tip_join) {
+      # Outer silhouette as one closed, self-symmetric lens outline. Drawn once —
+      # it is its own 180° rotation. With taper = TRUE the ends are true points;
+      # without it they are a 2t blunt edge.
+      outer <- shape_d(
+        list(
+          list(c_y,        -tr$x_end, tr$x_end),
+          list(negate(c_y), tr$x_end, -tr$x_end)
+        ),
+        map, tol
+      )
+      halves <- paste0(
+        sprintf('<path d="%s"/>', outer),
+        emit_halves(grp, rot, use_symmetry)
+      )
+    } else {
+      grp <- paste0(
+        sprintf('<path d="%s"/>',
+                shape_d(list(list(c_y, -tr$x_end, tr$x_end)), map, tol, close = FALSE)),
+        grp
+      )
+      halves <- emit_halves(grp, rot, use_symmetry)
+    }
+    gattr <- sprintf(
+      ' fill="none" stroke="%s" stroke-width="%s" stroke-linecap="round" stroke-linejoin="round"',
+      stroke, num(sw)
+    )
+  }
+
+  paste0(
+    sprintf('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %s 100">', num(map$W)),
+    sprintf('<g%s>', gattr),
+    halves,
+    '</g></svg>\n'
+  )
+}
+```
+
+## Variants
+
+```{r}
+#| label: make-variants
+
+# Per-variant overrides beat the shared defaults below. The -white / -navy
+# suffixes name the intended BACKGROUND (which selects the palette); the gaps
+# between shapes are transparent voids either way, so both sit on anything.
+variants <- list(
+  `logo-fill`       = list(kind = "fill"),                                       # solid, no gaps
+  `logo-fill-white` = list(kind = "fill", cut = TRUE, sw_px = 1.5),
+  `logo-fill-navy`  = list(kind = "fill", cut = TRUE, sw_px = 1.5, pal = pal_navy),
+  `logo-wire-black` = list(kind = "wire", stroke = "black"),
+  `logo-wire-white` = list(kind = "wire", stroke = "white")
+)
+
+# CHOSEN ("B4", July 2026): t = 0.5 -> 1.40:1, keyline 1.5px at 34px height.
+# Selected from the t x keyline grid in preview.html against the deployed
+# raster (~1.28:1). Wire stroke stays at 1.0px — the 1.5px decision was made for
+# the keyline specifically.
+t_px_final  <- 0.5
+sw_px_final <- 1.0
+taper_final <- TRUE
+
+paths <- vapply(names(variants), function(nm) {
+  args <- modifyList(
+    list(t_px = t_px_final, sw_px = sw_px_final, taper = taper_final),
+    variants[[nm]]
+  )
+  svg <- do.call(build_svg, args)
+  f <- file.path("../svg", paste0(nm, ".svg"))
+  writeLines(svg, f, useBytes = TRUE)
+  f
+}, "")
+```
+
+## Verification
+
+### Accuracy
+
+Every fitted arc is re-sampled densely and compared against the true `dnorm`.
+Deviation is reported in px at both the 34px target and a 400px render.
+
+```{r}
+#| label: tbl-accuracy
+#| echo: false
+
+check_arc <- function(cur, x0, x1, tol) {
+  ks <- fit_knots(cur, min(x0, x1), max(x0, x1), tol)
+  e  <- max(vapply(
+    seq_len(length(ks) - 1),
+    function(i) seg_err(cur, ks[i], ks[i+1], ts = seq(0.005, 0.995, by = 0.005)),
+    0
+  ))
+  tibble(segments = length(ks) - 1, dev_data = e)
+}
+
+tol_final <- 0.005 / s34
+lc        <- logo_curves(t_px_final, taper = taper_final)
+
+list(
+  `y  (silhouette)` = check_arc(lc$y,  -lc$x_end, lc$x_end, tol_final),
+  `y2 (fill span)`  = check_arc(lc$y2, -lc$x_end, x_tip_l,  tol_final),
+  `y2 (wire span)`  = check_arc(lc$y2, lc$x2_l,   x_tip_l,  tol_final),
+  `y3 (fill span)`  = check_arc(lc$y3, x_mid,     lc$x_end, tol_final)
+) |>
+  bind_rows(.id = "arc") |>
+  mutate(
+    `px @34px`  = dev_data * s34,
+    `px @400px` = dev_data * s34 * (400 / h_target)
+  ) |>
+  select(arc, segments, `px @34px`, `px @400px`) |>
+  kable(digits = 4, caption = "Max deviation of the fitted bézier from the drawn curve")
+```
+
+### Size
+
+```{r}
+#| label: tbl-size
+#| echo: false
+
+gz <- function(f) length(memCompress(readBin(f, "raw", file.size(f)), "gzip"))
+
+# what the inline-safety decision costs, measured rather than assumed
+with_use <- vapply(names(variants), function(nm) {
+  args <- modifyList(
+    list(t_px = t_px_final, sw_px = sw_px_final, taper = taper_final,
+         use_symmetry = TRUE),
+    variants[[nm]]
+  )
+  nchar(do.call(build_svg, args), type = "bytes")
+}, 0L)
+
+tibble(
+  file          = basename(paths),
+  bytes         = file.size(paths),
+  gzip          = vapply(paths, gz, 0L),
+  `if <use>`    = with_use
+) |>
+  mutate(`vs 9KB PNG` = sprintf("%.0f%%", 100 * bytes / 9165)) |>
+  kable(caption = "Output size (`if <use>` = cost of inline-safety, see emit_halves)")
+```
+
+## Preview
+
+Builds `preview.html` (local to `_generator/`): every variant, swept across the
+trim threshold, at 34 / 96 / 400px, on the background it is meant for.
+
+```{r}
+#| label: make-preview
+
+t_sweep  <- c(0.25, 0.5, 1.0, 1.5, 2.0)
+sw_sweep <- c(0.5, 1.0, 1.5, 2.0)
+sizes    <- c(34, 96, 400)
+
+cell <- function(svg, h) {
+  sprintf('<div class="cell"><div class="lab">%dpx</div>%s</div>',
+          h, sub("<svg ", sprintf('<svg height="%d" ', h), svg))
+}
+
+row <- function(label, svg) {
+  paste0(
+    '<div class="row"><div class="rlab">', label, '</div>',
+    paste(vapply(sizes, function(h) cell(svg, h), ""), collapse = ""),
+    '</div>'
+  )
+}
+
+section <- function(title, bg, rows) {
+  sprintf('<section class="%s"><h2>%s</h2>%s</section>', bg, title, paste(rows, collapse = ""))
+}
+
+secs <- c(
+  section("① taper — blunt cut vs. true point (the main decision)", "light",
+    unlist(lapply(c(1.0, 1.5, 2.0), function(tp)
+      vapply(c(FALSE, TRUE), function(tap)
+        row(sprintf("t=%.1f taper=%s", tp, tap),
+            build_svg("fill", t_px = tp, taper = tap)), "")))),
+
+  section("② fill — trim sweep (t also sets the proportions; original is 1.58:1)", "light",
+    c(vapply(t_sweep, function(tp) {
+        lc <- logo_curves(tp)
+        row(sprintf("t=%.2f &rarr; %.2f:1", tp, make_map(lc$x_end, 0)$W / 100),
+            build_svg("fill", t_px = tp))
+      }, ""),
+      paste0('<div class="row"><div class="rlab">old PNG</div>',
+             paste(vapply(sizes, function(h) sprintf(
+               '<div class="cell"><div class="lab">%dpx</div><img src="logo_whborder.png" height="%d"></div>',
+               h, h), ""), collapse = ""), '</div>'))),
+
+  section("③ fill + transparent gaps — trim sweep (gap 1.0px; grey bg shows through)", "mid",
+    vapply(t_sweep, function(tp)
+      row(sprintf("t = %.1f px", tp), build_svg("fill", t_px = tp, cut = TRUE)), "")),
+
+  section("④ fill + transparent gaps — gap width sweep (t = 1.5px)", "mid",
+    vapply(sw_sweep, function(w)
+      row(sprintf("gap = %.1f px", w),
+          build_svg("fill", t_px = 1.5, sw_px = w, cut = TRUE)), "")),
+
+  section("⑤ wire black — trim sweep", "light",
+    vapply(t_sweep, function(tp)
+      row(sprintf("t = %.1f px", tp), build_svg("wire", t_px = tp, stroke = "black")), "")),
+
+  section("⑥ wire black — inner curves cut at their own height (leaves stubs)", "light",
+    vapply(t_sweep, function(tp)
+      row(sprintf("t = %.1f px", tp),
+          build_svg("wire", t_px = tp, stroke = "black", inner_trim = "height")), "")),
+
+  section("⑦ wire white — trim sweep (tapered)", "dark",
+    vapply(t_sweep, function(tp)
+      row(sprintf("t = %.1f px", tp), build_svg("wire", t_px = tp, stroke = "white")), "")),
+
+  section("⑧ baseline — current raster at the same sizes", "light",
+    paste0(
+      '<div class="row"><div class="rlab">logo_whborder.png</div>',
+      paste(vapply(sizes, function(h) sprintf(
+        '<div class="cell"><div class="lab">%dpx</div><img src="logo_whborder.png" height="%d"></div>',
+        h, h), ""), collapse = ""),
+      '</div>'
+    ))
+)
+
+css <- '
+body{font:14px/1.5 system-ui,sans-serif;margin:0;padding:24px;background:#fafafa;color:#111}
+h1{font-size:20px} h2{font-size:15px;margin:0 0 12px;font-weight:600}
+section{margin:0 0 28px;padding:16px;border-radius:8px;border:1px solid #0001}
+section.light{background:#fff}
+section.mid{background:#e7edf2}
+section.dark{background:#1b2127;color:#eee;border-color:#fff2}
+.row{display:flex;align-items:center;gap:20px;padding:8px 0;border-top:1px solid #8881}
+.row:first-of-type{border-top:0}
+.rlab{width:130px;flex:none;font-variant-numeric:tabular-nums;opacity:.75}
+.cell{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.lab{font-size:10px;opacity:.5}
+'
+
+writeLines(
+  c('<!doctype html><meta charset="utf-8"><title>logoSTS preview</title>',
+    sprintf('<style>%s</style>', css),
+    '<h1>logoSTS — vector variants</h1>',
+    secs),
+  "preview.html",
+  useBytes = TRUE
+)
+```
