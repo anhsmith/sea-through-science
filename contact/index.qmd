@@ -30,7 +30,7 @@ Phone: [+64-21-0383941](tel:+64-21-0383941)
 
 - [{{< iconify fa6-brands google-scholar >}} Google Scholar](https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ)
 - [{{< iconify fa6-brands github >}} GitHub](https://github.com/anhsmith)
-- [{{< iconify fa6-brands linkedin >}} LinkedIn](https://www.linkedin.com/in/adam-smith-1a723532/)
+- [{{< iconify fa6-brands linkedin >}} LinkedIn](https://www.linkedin.com/in/anhsmith)
 
 :::
 

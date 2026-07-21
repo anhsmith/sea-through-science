@@ -18,7 +18,7 @@ project:
 
 website:
   title: "Sea Through Science"
-  description: "Boutique consulting in statistical analysis, modelling, and marine research."
+  description: "Boutique consulting in statistical analysis and modelling for the life sciences."
   # Absolute base URL so social-card image/url tags resolve for LinkedIn etc.
   site-url: https://www.seathrough.science
   # Default preview image for social shares (pages can override with their own image:)
@@ -64,7 +64,7 @@ website:
       - icon: github
         href: https://github.com/anhsmith
       - icon: linkedin
-        href: https://www.linkedin.com/in/adam-smith-1a723532/
+        href: https://www.linkedin.com/in/anhsmith
       - icon: envelope
         href: "mailto:adam@seathrough.science"
 

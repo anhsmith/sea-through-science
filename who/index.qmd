@@ -15,7 +15,7 @@ about:
       href: https://github.com/anhsmith
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/adam-smith-1a723532/
+      href: https://www.linkedin.com/in/anhsmith
     - icon: envelope
       text: "Send Adam an email"
       href: "mailto:adam@seathrough.science"  

@@ -3,7 +3,7 @@ title: ""
 # pagetitle drives <title> + og:title without rendering a visible heading
 # (the page keeps title: "" so the logo carries the branding, not an h1).
 pagetitle: "Sea Through Science"
-description: "Boutique consulting in statistical analysis, modelling, and marine research."
+description: "Boutique consulting in statistical analysis and modelling for the life sciences."
 # Raster social-card image (og:image); SVG is rejected by most social platforms.
 image: /img/plotnice3.png
 about:
@@ -24,7 +24,7 @@ about:
 Need a statistician who understands biology and ecology?  
 Need an ecologist who understands statistics?  
 
-**Sea Through Science** is a boutique consulting company specialising in **statistical analysis, modelling, and marine research**.
+**Sea Through Science** is a boutique consulting company specialising in **statistical analysis and modelling for the life sciences**.
 
 We combine expertise in ecology, fisheries, and data science with a commitment to clarity — helping you see through complexity to insights that matter.  
 
