@@ -8,6 +8,22 @@ execute:
   echo: false
   message: false
   warning: false
+
+# NOTE (kept in YAML, not an HTML comment in the body -- pandoc passes <!-- -->
+# straight through to the published page source):
+#
+# The Southwest Pacific video is a hand-written iframe rather than the video
+# shortcode, so it can carry referrerpolicy="strict-origin-when-cross-origin".
+# Since late 2025 YouTube refuses to configure the player when it cannot
+# identify the embedding host from the Referer, failing with "Error 153 - video
+# player configuration error". The shortcode emits no referrerpolicy, leaving
+# the request at the document/browser default, which privacy extensions and
+# strict browser modes strip. The wrapper classes match the shortcode's output,
+# so the responsive 16x9 layout is unchanged.
+#
+# Do not write the shortcode name in braces anywhere in this file, including in
+# comments -- Quarto expands shortcodes even inside HTML comments, and an
+# argument-less one crashes the render.
 ---
 
 ## The BRUV method
@@ -77,7 +93,15 @@ Full [article](https://www.rnz.co.nz/news/national/544707/watch-rare-fiordland-g
 
 #### An [expedition](https://www.aucklandmuseum.com/discover/research/research-projects/south-west-pacific-expedition) to the Southwest Pacific
 
-{{< video https://www.youtube.com/watch?v=JshIXoc6lMU >}}
+```{=html}
+<div class="quarto-video ratio ratio-16x9">
+<iframe data-external="1" src="https://www.youtube.com/embed/JshIXoc6lMU"
+        title="An expedition to the Southwest Pacific"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</div>
+```
 
 #### A global study of shark populations
 
