@@ -26,6 +26,10 @@ website:
   open-graph: true
   twitter-card:
     card-style: summary_large_image
+  # Google Analytics 4. Quarto expands this into the standard gtag.js
+  # snippet in the <head> of every page in the project, so the tag does
+  # not need pasting into _favicon-head.html or any individual page.
+  google-analytics: G-4ZCTDCKVPG
   page-footer:
     left: "&copy; Copyright <script>document.write(new Date().getFullYear())</script>, Adam N. H. Smith<br>"
     right: "Built with ❤️ and [Quarto](https://quarto.org/)."

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -38,12 +41,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-45730bd1fabb90b7557d1fb3e98fcd1f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-4da8d1b44daf2fb6482ef6549bc0e29b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-bb40deea7f8bbc6d52c2bc90c9fb6fb9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-3a1925c48b369c464d91fddb88f1cf0c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,6 +74,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZCTDCKVPG"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4ZCTDCKVPG', { 'anonymize_ip': true});
+</script>
 <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
 <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
 <link rel="shortcut icon" href="../favicon/favicon.ico">
@@ -457,11 +469,21 @@ ul.task-list li input[type="checkbox"] {
     } catch (e) {}
   })();
 </script>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
+<p>The panel above is a browser simulation of the model. Fitting it to data is done with <strong>bicountbrms</strong>, an R package of custom <a href="https://paulbuerkner.com/brms/" target="_blank">brms</a> families for jointly modelling paired counts. It provides <code>bipois()</code> and <code>binegbin()</code> — Poisson and negative-binomial trivariate reductions — and a partial-observation variant of each, for when one of the two counts is missing on some sets. Its native rate and dispersion parameters reparameterise into the four coordinates used as dials above: overall count rate, congruence, bias, and excess dispersion.</p>
+<p>A companion package, <strong>skellambrms</strong>, models the difference between the two counts directly rather than the pair jointly, with Skellam, discrete-Laplace and discrete-normal families. Each is available in a fixed-location form and a free-location form that estimates the systematic disagreement between the two sources.</p>
+<p>Both packages are archived on Zenodo under concept DOIs, which resolve to the current version rather than to a fixed release.</p>
+<ul>
+<li><strong>bicountbrms</strong> — <a href="https://github.com/anhsmith/bicountbrms" target="_blank">source</a> · <a href="https://anhsmith.github.io/bicountbrms/" target="_blank">documentation</a> · <a href="https://doi.org/10.5281/zenodo.22239120" target="_blank">doi:10.5281/zenodo.22239120</a></li>
+<li><strong>skellambrms</strong> — <a href="https://github.com/anhsmith/skellambrms" target="_blank">source</a> · <a href="https://anhsmith.github.io/skellambrms/" target="_blank">documentation</a> · <a href="https://doi.org/10.5281/zenodo.22231870" target="_blank">doi:10.5281/zenodo.22231870</a></li>
+</ul>
 <hr>
 <p>Built by Sea Through Science as part of a project to evaluate electronic monitoring of Belize-flagged longline vessels, and how this method compares with logbook data — a project run in collaboration with <a href="https://jpec.co.nz/" target="_blank">JPEC Consulting</a> for <a href="https://www.nature.org" target="_blank">The Nature Conservancy</a>.</p>
 <p>Tuna silhouette: <em>Thunnus albacares</em> by T. Michael Keesey, <a href="https://www.phylopic.org/images/f4503c9f-35df-4a0d-a6ca-c66c87d68274" target="_blank">PhyloPic</a>, public domain.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

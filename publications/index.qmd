@@ -3,8 +3,40 @@ title: "Publications"
 bibliography: ../references.bib
 csl: ../int-res.csl
 nocite: '@*'
+
+# NOTE: maintenance notes live HERE, in YAML comments -- pandoc passes <!-- -->
+# straight through to the published page, so a body comment ends up in public
+# page source.
+#
+# The empty ::: {#refs} ::: div below is load-bearing. Without it, citeproc
+# appends the bibliography at the END of the document, which would drop the
+# whole list below the Software section. The div pins it in place.
+#
+# The list deliberately has NO heading above it. "References" was wrong -- these
+# are Adam's own publications, not works cited -- and any heading there stacks a
+# second header directly under the page title. Software is the only h2.
+#
+# The two Software entries are hand-written rather than @software records in
+# references.bib, because nocite: '@*' sweeps EVERY bib entry into the list
+# above -- a bib entry would appear in both sections. They are formatted to
+# match int-res.csl output: Authors (Year) Title. Source. Deliberately no
+# version number: the Zenodo DOIs are concept DOIs that track the current
+# release, so a pinned version here would go stale on each release.
 ---
 
 A full list of Adam's peer-reviewed publications. Also available on [Google Scholar](https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ).
 
-## References
+::: {#refs}
+:::
+
+## Software
+
+::: {.csl-bib-body .hanging-indent}
+::: {.csl-entry}
+Smith ANH (2026) bicountbrms: Joint Bivariate-Count brms Custom Families for Paired Counts. Zenodo. [doi:10.5281/zenodo.22239120](https://doi.org/10.5281/zenodo.22239120). Underpins the [shared-catch simulation model](../interactive/stacks.qmd).
+:::
+
+::: {.csl-entry}
+Smith ANH (2026) skellambrms: Skellam and Discrete-Difference brms Custom Families for Count Differences. Zenodo. [doi:10.5281/zenodo.22231870](https://doi.org/10.5281/zenodo.22231870)
+:::
+:::

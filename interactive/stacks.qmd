@@ -112,6 +112,31 @@ Each longline set has a logbook (LB) count and an electronic monitoring (EM) cou
 </script>
 ```
 
+## Software
+
+The panel above is a browser simulation of the model. Fitting it to data is done with
+**bicountbrms**, an R package of custom [brms](https://paulbuerkner.com/brms/){target="_blank"}
+families for jointly modelling paired counts. It provides `bipois()` and `binegbin()` —
+Poisson and negative-binomial trivariate reductions — and a partial-observation variant
+of each, for when one of the two counts is missing on some sets. Its native rate and
+dispersion parameters reparameterise into the four coordinates used as dials above:
+overall count rate, congruence, bias, and excess dispersion.
+
+A companion package, **skellambrms**, models the difference between the two counts
+directly rather than the pair jointly, with Skellam, discrete-Laplace and discrete-normal
+families. Each is available in a fixed-location form and a free-location form that
+estimates the systematic disagreement between the two sources.
+
+Both packages are archived on Zenodo under concept DOIs, which resolve to the current
+version rather than to a fixed release.
+
+- **bicountbrms** — [source](https://github.com/anhsmith/bicountbrms){target="_blank"} ·
+  [documentation](https://anhsmith.github.io/bicountbrms/){target="_blank"} ·
+  [doi:10.5281/zenodo.22239120](https://doi.org/10.5281/zenodo.22239120){target="_blank"}
+- **skellambrms** — [source](https://github.com/anhsmith/skellambrms){target="_blank"} ·
+  [documentation](https://anhsmith.github.io/skellambrms/){target="_blank"} ·
+  [doi:10.5281/zenodo.22231870](https://doi.org/10.5281/zenodo.22231870){target="_blank"}
+
 ---
 
 Built by Sea Through Science as part of a project to evaluate electronic monitoring of Belize-flagged longline vessels, and how this method compares with logbook data — a project run in collaboration with [JPEC Consulting](https://jpec.co.nz/){target="_blank"} for [The Nature Conservancy](https://www.nature.org){target="_blank"}.
