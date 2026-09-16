@@ -10,23 +10,42 @@ nocite: '@*'
 #
 # The empty ::: {#refs} ::: div below is load-bearing. Without it, citeproc
 # appends the bibliography at the END of the document, which would drop the
-# whole list below the Software section. The div pins it in place.
+# whole list below the Preprints and Software sections. The div pins it there.
 #
-# The list deliberately has NO heading above it. "References" was wrong -- these
-# are Adam's own publications, not works cited -- and any heading there stacks a
-# second header directly under the page title. Software is the only h2.
+# The peer-reviewed list deliberately has NO heading above it. "References" was
+# wrong -- these are Adam's own publications, not works cited -- and any heading
+# there stacks a second header directly under the page title. The intro line
+# identifies the list instead. Preprints and Software are the only h2s.
 #
-# The two Software entries are hand-written rather than @software records in
-# references.bib, because nocite: '@*' sweeps EVERY bib entry into the list
-# above -- a bib entry would appear in both sections. They are formatted to
-# match int-res.csl output: Authors (Year) Title. Source. Deliberately no
-# version number: the Zenodo DOIs are concept DOIs that track the current
-# release, so a pinned version here would go stale on each release.
+# Preprint and Software entries are hand-written rather than bib records,
+# because nocite: '@*' sweeps EVERY bib entry into the peer-reviewed list above
+# -- a bib entry would appear in two sections at once. They are formatted to
+# match int-res.csl output: Authors (Year) Title. Source.
+#
+# UPKEEP: when a preprint is published, DELETE it from the Preprints section
+# below and add the journal version to references.bib. Leaving it in both places
+# double-lists the same work.
+#
+# Software entries carry no version number on purpose: the Zenodo DOIs are
+# concept DOIs that track the current release, so a pinned version would go
+# stale on each release.
 ---
 
-A full list of Adam's peer-reviewed publications. Also available on [Google Scholar](https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ).
+A full list of Adam's peer-reviewed publications, with preprints and software listed below. Also available on [Google Scholar](https://scholar.google.com/citations?hl=en&user=5OvrU9IAAAAJ).
 
 ::: {#refs}
+:::
+
+## Preprints currently under review
+
+::: {.csl-bib-body .hanging-indent}
+::: {.csl-entry}
+Bristow J, Finucci B, Smith ANH (2026) Automated Reading of Vertebral Images for Aging Shortfin Mako (*Isurus oxyrinchus*) Using Bayesian Deep Learning. SSRN preprint. [doi:10.2139/ssrn.7428975](https://doi.org/10.2139/ssrn.7428975)
+:::
+
+::: {.csl-entry}
+Pierre JP, Smith ANH, López-Serrano A, Robinson RA, Coc CO (2026) Reconciling Two Imperfect Truths: Improving Fisher Reporting and Electronic Monitoring in a Regionally Managed Tuna Fishery. SSRN preprint. [doi:10.2139/ssrn.7100467](https://doi.org/10.2139/ssrn.7100467)
+:::
 :::
 
 ## Software

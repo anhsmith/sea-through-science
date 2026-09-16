@@ -18,3 +18,23 @@
 .navbar-brand h1, .navbar-title {
     display: none !important;
 }
+
+/*-- scss:rules --*/
+
+// Below 992px Quarto tightens the first heading in the content to margin-top:
+// 1rem, via
+//   @media (max-width: 991.98px) {
+//     #quarto-content section:first-of-type h2:first-of-type { margin-top: 1rem }
+//   }
+// That assumes the heading sits just under the title block, where tight is
+// right. On the publications page it instead follows the reference list, whose
+// last entry has margin-bottom: 0 (Quarto sets data-entry-spacing="0"), so the
+// heading collides with the citation above it. Wide viewports are unaffected --
+// the bug only shows under 992px, which is why it is easy to miss.
+//
+// Two IDs are needed to outrank that rule: its specificity is (1,2,2), so the
+// obvious `#refs + section > h2` at (1,0,2) loses. Keyed on structure rather
+// than heading text, and scoped through #refs, which exists only on this page.
+#quarto-content #refs + section > h2 {
+  margin-top: 2rem;
+}

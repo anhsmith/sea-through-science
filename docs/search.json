@@ -270,7 +270,14 @@
     "href": "publications/index.html",
     "title": "Publications",
     "section": "",
-    "text": "A full list of Adam’s peer-reviewed publications. Also available on Google Scholar."
+    "text": "A full list of Adam’s peer-reviewed publications, with preprints and software listed below. Also available on Google Scholar."
+  },
+  {
+    "objectID": "publications/index.html#preprints-currently-under-review",
+    "href": "publications/index.html#preprints-currently-under-review",
+    "title": "Publications",
+    "section": "Preprints currently under review",
+    "text": "Preprints currently under review\n\n\nBristow J, Finucci B, Smith ANH (2026) Automated Reading of Vertebral Images for Aging Shortfin Mako (Isurus oxyrinchus) Using Bayesian Deep Learning. SSRN preprint. doi:10.2139/ssrn.7428975\n\n\nPierre JP, Smith ANH, López-Serrano A, Robinson RA, Coc CO (2026) Reconciling Two Imperfect Truths: Improving Fisher Reporting and Electronic Monitoring in a Regionally Managed Tuna Fishery. SSRN preprint. doi:10.2139/ssrn.7100467"
   },
   {
     "objectID": "publications/index.html#software",
