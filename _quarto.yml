@@ -6,6 +6,8 @@ project:
   # such strays after every render, automatically — see _clean-strays.R.
   post-render:
     - _clean-strays.R
+    # Makes sitemap.xml agree with the canonical URLs — see the script.
+    - _canonical-sitemap.R
   resources:
     - CNAME
     # Raw self-contained explorer apps. Quarto would probably discover these via
@@ -77,6 +79,7 @@ website:
 format:
   html:
     fontsize: 1.1em
+    canonical-url: true
     # Full favicon set (svg tab icon + png/ico fallbacks + apple-touch + PWA
     # manifest), generated from the logo by logo/_generator/lockup.qmd.
     include-in-header:
